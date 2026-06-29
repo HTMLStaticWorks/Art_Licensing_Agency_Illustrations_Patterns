@@ -64,7 +64,7 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+    <nav class="hidden xl:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
       <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
@@ -73,12 +73,12 @@
         Home 2
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
-        Patterns
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
-      </a>
       <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Patterns
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
       <a href="licensing.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
@@ -96,7 +96,7 @@
     </nav>
 
     <!-- Toolbar controls -->
-    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
+    <div class="hidden xl:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
         <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
@@ -108,13 +108,12 @@
         RTL
       </button>
 
-      <!-- Portal Access (Login / Sign Up) -->
-      <a href="login.html" class="text-brand-navy dark:text-slate-300 hover:text-brand-gold text-xs font-semibold uppercase tracking-wider transition duration-300 px-3 py-2">Login</a>
+      <!-- Portal Access (Sign Up) -->
       <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
     </div>
 
     <!-- Mobile controls & Hamburger -->
-    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+    <div class="flex xl:hidden items-center space-x-2 rtl:space-x-reverse">
       <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
         <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
       </button>
@@ -125,21 +124,21 @@
   <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
     <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
     <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
-    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
     <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
     <a href="licensing.html" class="hover:text-brand-gold transition duration-300">Licensing</a>
     <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
     
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
-    <a href="login.html" class="hover:text-brand-gold transition duration-300 text-sm">Login</a>
     <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
     
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
     <div class="flex items-center space-x-6 mt-4">
       <!-- Mobile Theme Toggle -->
       <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
-        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-lg"></i>
+        <i class="fa-solid fa-moon moon-icon text-white text-lg"></i>
       </button>
       <!-- Mobile RTL Toggle -->
       <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
@@ -163,7 +162,7 @@
         <div class="max-w-md mx-auto pt-6">
           <div class="relative">
             <input type="text" placeholder="Search design articles..." class="w-full bg-slate-900/50 border border-slate-700/50 text-white rounded-full px-6 py-3 text-sm focus:outline-none focus:border-brand-gold transition">
-            <button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-brand-gold transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="absolute right-4 rtl:right-auto rtl:left-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-brand-gold transition"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
         </div>
       </div>
@@ -176,20 +175,20 @@
           <div class="lg:col-span-7 relative overflow-hidden h-[300px] lg:h-auto min-h-[300px]">
             <img src="blog_cross_border_mna.png" alt="Illustrator styling repeat swatches" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-500">
           </div>
-          <div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-center space-y-6">
-            <div class="space-y-4">
-              <span class="inline-block px-2.5 py-0.5 bg-brand-royal/10 border border-brand-royal/30 text-brand-royal text-[10px] font-bold uppercase tracking-wider rounded-full">Spotlight</span>
-              <h2 class="text-2xl md:text-3xl font-bold font-serif text-slate-900 dark:text-white leading-tight font-serif">Navigating Colorways in Custom Fabric Licensing</h2>
-              <p class="text-slate-600 dark:text-slate-400 text-sm">
+          <div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-center space-y-6 text-center lg:text-left rtl:lg:text-right">
+            <div class="space-y-4 flex flex-col items-center lg:items-start">
+              <span class="inline-block px-2.5 py-0.5 bg-brand-royal/10 border border-brand-royal/30 text-brand-royal text-[10px] font-bold uppercase tracking-wider rounded-full w-fit">Spotlight</span>
+              <h2 class="text-2xl md:text-3xl font-bold font-serif text-slate-900 dark:text-white leading-tight font-serif w-full">Navigating Colorways in Custom Fabric Licensing</h2>
+              <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl">
                 As brands launch seasonal collections, designers must build flexible repeat files that scale across different dye formulations. This guide outlines how to build clean Pantone TCX palettes and separate design vectors to maintain pattern clarity.
               </p>
-              <ul class="space-y-2 pt-2 text-xs text-slate-500 dark:text-slate-400">
+              <ul class="space-y-2 pt-2 text-xs text-slate-500 dark:text-slate-400 text-left rtl:text-right">
                 <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-royal mr-2 rtl:ml-2"></i> Separating colorways across multiple digital files</li>
                 <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-royal mr-2 rtl:ml-2"></i> Choosing appropriate repeat offsets for fabric width boundaries</li>
                 <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-royal mr-2 rtl:ml-2"></i> Aligning digital screen swatches with production output</li>
               </ul>
             </div>
-            <div class="pt-6 flex items-center justify-between text-xs text-slate-400">
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
               <div class="flex items-center space-x-2">
                 <span>By Arthur Pendelton</span>
               </div>
@@ -208,43 +207,43 @@
     <section class="py-16 px-6 md:px-12 bg-white dark:bg-brand-navy border-t border-slate-100 dark:border-slate-800 transition-colors">
       <div class="max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-6 space-y-6" data-aos="fade-right">
+          <div class="lg:col-span-6 space-y-6 text-center lg:text-left rtl:lg:text-right" data-aos="fade-right">
             <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Our Advisory Philosophy</span>
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white leading-tight font-serif">
               Creative Resources Vetted for Production
             </h2>
-            <div class="w-16 h-1 bg-brand-gold"></div>
-            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+            <div class="w-16 h-1 bg-brand-gold mx-auto lg:mx-0"></div>
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
               At Licensing, we believe that design success is rooted in thorough technical preparation. This Insights platform is curated by our design directors to simplify digital file setups, repeat boundaries, and contract structures.
             </p>
-            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
               Whether you are preparing a textile collection, setting up holiday greeting cards, or licensing botanical repeats for boutique beauty cosmetics, our articles guide your production workflow.
             </p>
           </div>
           
           <div class="lg:col-span-6 grid sm:grid-cols-2 gap-6" data-aos="fade-left">
-            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 text-center sm:text-left rtl:sm:text-right flex flex-col items-center sm:items-start">
               <div class="text-brand-royal text-2xl mb-3"><i class="fa-solid fa-compass-drafting"></i></div>
               <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Technical Tile Repeats</h4>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Step-by-step guides on creating vector seamless repeats, checking alignment borders, and setting up offsets.
               </p>
             </div>
-            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 text-center sm:text-left rtl:sm:text-right flex flex-col items-center sm:items-start">
               <div class="text-brand-royal text-2xl mb-3"><i class="fa-solid fa-copyright"></i></div>
               <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Licensing Guidelines</h4>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Clear explanations of licensing contract boundaries, exclusive category scopes, and royalty splits.
               </p>
             </div>
-            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 text-center sm:text-left rtl:sm:text-right flex flex-col items-center sm:items-start">
               <div class="text-brand-royal text-2xl mb-3"><i class="fa-solid fa-palette"></i></div>
               <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Color Curation Palettes</h4>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Insights on matching Pantone TCX values and mapping colorways coordinates across fabric collections.
               </p>
             </div>
-            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 text-center sm:text-left rtl:sm:text-right flex flex-col items-center sm:items-start">
               <div class="text-brand-royal text-2xl mb-3"><i class="fa-solid fa-feather-pointed"></i></div>
               <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Artist Spotlights</h4>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -261,7 +260,7 @@
       <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
         <!-- Main Content (Articles Grid) -->
         <div class="lg:col-span-8 space-y-12">
-          <h3 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 dark:text-white mb-6">Latest Articles</h3>
+          <h3 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 dark:text-white mb-6 text-center lg:text-left rtl:lg:text-right">Latest Articles</h3>
           
           <div class="grid md:grid-cols-2 gap-8">
             <!-- Article Card 1 -->
@@ -417,12 +416,12 @@
       </div>
       <div class="max-w-6xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center" data-aos="zoom-in">
         <!-- Left Column -->
-        <div class="lg:col-span-6 space-y-6 text-left rtl:text-right">
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-left rtl:lg:text-right flex flex-col items-center lg:items-start">
           <span class="inline-block px-3 py-1 bg-brand-royal/10 border border-brand-royal/30 text-brand-royal text-xs font-semibold tracking-widest uppercase rounded-full font-sans">
             Weekly Catalog Updates
           </span>
           <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight font-serif">Subscribe to Design Releases</h2>
-          <p class="text-slate-300 text-base md:text-lg max-w-xl">
+          <p class="text-slate-300 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
             Join over 1,200 design directors receiving our confidential weekly lookbook releases on repeating pattern swatches and artist spotlights.
           </p>
           <div class="flex items-center space-x-3 rtl:space-x-reverse text-xs text-slate-400">
@@ -473,7 +472,7 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Overview -->
       <div class="space-y-4">
-        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
           <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
           <span>LICENSING</span>
         </a>
@@ -533,9 +532,9 @@
     </div>
 
     <!-- Bottom footer details -->
-    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col lg:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center lg:text-left rtl:lg:text-right">
       <p>&copy; 2026 Licensing Agency. All rights reserved. Creative assets are protected by copyright of respective artists.</p>
-      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0 font-sans">
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 lg:mt-0 whitespace-nowrap font-sans">
         <a href="#" class="hover:text-slate-300">Privacy Policy</a>
         <span>&bull;</span>
         <a href="#" class="hover:text-slate-300">Terms of Use</a>

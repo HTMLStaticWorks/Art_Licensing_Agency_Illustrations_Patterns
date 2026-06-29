@@ -247,6 +247,25 @@ html.dark,
   font-weight: inherit !important;
 }
 
+/* Mobile menu open: force white on brand name & hamburger icon in light mode */
+html.mobile-menu-open:not(.dark) #header-logo span,
+html.mobile-menu-open:not(.dark) #header-logo img,
+html.mobile-menu-open:not(.dark) #hamburger-menu {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+html.mobile-menu-open:not(.dark) #hamburger-icon {
+  color: #ffffff !important;
+}
+
+/* Force header transparent when mobile menu is open (prevents white-on-white scrolled header contrast issue) */
+html.mobile-menu-open #header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
 /* Footer text contrast overrides */
 footer, 
 footer a:not(:hover), 

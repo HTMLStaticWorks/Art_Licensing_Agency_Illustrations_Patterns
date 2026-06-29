@@ -44,17 +44,31 @@ function initTheme() {
 
 function updateThemeIcon() {
   const themeToggle = document.getElementById('theme-toggle');
-  if (!themeToggle) return;
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
   const isDark = document.documentElement.classList.contains('dark');
-  const sunIcon = themeToggle.querySelector('.sun-icon');
-  const moonIcon = themeToggle.querySelector('.moon-icon');
   
-  if (isDark) {
-    if (sunIcon) sunIcon.classList.remove('hidden');
-    if (moonIcon) moonIcon.classList.add('hidden');
-  } else {
-    if (sunIcon) sunIcon.classList.add('hidden');
-    if (moonIcon) moonIcon.classList.remove('hidden');
+  if (themeToggle) {
+    const sunIcon = themeToggle.querySelector('.sun-icon');
+    const moonIcon = themeToggle.querySelector('.moon-icon');
+    if (isDark) {
+      if (sunIcon) sunIcon.classList.remove('hidden');
+      if (moonIcon) moonIcon.classList.add('hidden');
+    } else {
+      if (sunIcon) sunIcon.classList.add('hidden');
+      if (moonIcon) moonIcon.classList.remove('hidden');
+    }
+  }
+
+  if (themeToggleMobile) {
+    const sunIconMobile = themeToggleMobile.querySelector('.sun-icon');
+    const moonIconMobile = themeToggleMobile.querySelector('.moon-icon');
+    if (isDark) {
+      if (sunIconMobile) sunIconMobile.classList.remove('hidden');
+      if (moonIconMobile) moonIconMobile.classList.add('hidden');
+    } else {
+      if (sunIconMobile) sunIconMobile.classList.add('hidden');
+      if (moonIconMobile) moonIconMobile.classList.remove('hidden');
+    }
   }
 }
 
@@ -115,7 +129,14 @@ function initMobileMenu() {
     hamburger.setAttribute('aria-expanded', !isExpanded);
     mobileNav.classList.toggle('hidden');
     mobileNav.classList.toggle('flex');
-    
+
+    // Toggle mobile-menu-open on <html> for light mode contrast fix
+    if (!isExpanded) {
+      document.documentElement.classList.add('mobile-menu-open');
+    } else {
+      document.documentElement.classList.remove('mobile-menu-open');
+    }
+
     // Toggle icon if FontAwesome class is present
     const icon = hamburger.querySelector('#hamburger-icon');
     if (icon) {
@@ -403,7 +424,7 @@ function initActiveNavLink() {
     const href = link.getAttribute('href');
     if (href === currentPath) {
       link.classList.add('text-brand-gold', 'font-semibold');
-      link.classList.remove('text-slate-300', 'text-slate-700', 'dark:text-slate-300');
+      link.classList.remove('text-slate-300', 'text-slate-700', 'dark:text-slate-300', 'text-brand-navy');
       
       // Underline/active indicator span
       const indicator = link.querySelector('.nav-indicator');

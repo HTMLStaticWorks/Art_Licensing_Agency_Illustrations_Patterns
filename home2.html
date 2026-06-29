@@ -93,7 +93,7 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+    <nav class="hidden xl:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
       <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
@@ -102,12 +102,12 @@
         Home 2
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
-        Patterns
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
-      </a>
       <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Patterns
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
       <a href="licensing.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
@@ -125,7 +125,7 @@
     </nav>
 
     <!-- Toolbar controls -->
-    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
+    <div class="hidden xl:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
         <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
@@ -137,13 +137,12 @@
         RTL
       </button>
 
-      <!-- Portal Access (Login / Sign Up) -->
-      <a href="login.html" class="text-brand-navy dark:text-slate-300 hover:text-brand-gold text-xs font-semibold uppercase tracking-wider transition duration-300 px-3 py-2">Login</a>
+      <!-- Portal Access (Sign Up) -->
       <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
     </div>
 
     <!-- Mobile controls & Hamburger -->
-    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+    <div class="flex xl:hidden items-center space-x-2 rtl:space-x-reverse">
       <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
         <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
       </button>
@@ -154,21 +153,21 @@
   <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
     <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
     <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
-    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
     <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
     <a href="licensing.html" class="hover:text-brand-gold transition duration-300">Licensing</a>
     <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
     
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
-    <a href="login.html" class="hover:text-brand-gold transition duration-300 text-sm">Login</a>
     <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
     
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
     <div class="flex items-center space-x-6 mt-4">
       <!-- Mobile Theme Toggle -->
       <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
-        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-lg"></i>
+        <i class="fa-solid fa-moon moon-icon text-white text-lg"></i>
       </button>
       <!-- Mobile RTL Toggle -->
       <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
@@ -226,18 +225,12 @@
         <!-- Overlapping Canvas Stack (Right) -->
         <div class="lg:col-span-6 flex justify-center items-center relative min-h-[420px]" data-aos="zoom-in" data-aos-delay="200">
           <div class="relative w-72 h-96 md:w-80 md:h-[420px]">
-            <!-- Canvas 1 (Back) -->
-            <div id="hero-img-back" class="absolute -left-8 -top-8 w-48 h-64 md:w-56 md:h-72 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform -rotate-6 hover:-rotate-3 transition-transform duration-500"
-                 style="background-image: url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80');">
-              <div class="absolute inset-0 bg-black/20 rounded-lg"></div>
-            </div>
-            <!-- Canvas 2 (Middle) -->
-            <div id="hero-img-middle" class="absolute -right-8 top-12 w-48 h-64 md:w-56 md:h-72 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform rotate-6 hover:rotate-3 transition-transform duration-500"
-                 style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80');">
-              <div class="absolute inset-0 bg-black/20 rounded-lg"></div>
-            </div>
+            <!-- Canvas 1 (Back) - Hidden -->
+            <div id="hero-img-back" class="hidden"></div>
+            <!-- Canvas 2 (Middle) - Hidden -->
+            <div id="hero-img-middle" class="hidden"></div>
             <!-- Canvas 3 (Front Focus) -->
-            <div id="hero-img-front" class="absolute left-12 top-20 w-52 h-72 md:w-60 md:h-80 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform hover:scale-105 transition-transform duration-500"
+            <div id="hero-img-front" class="absolute inset-0 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform hover:scale-105 transition-transform duration-500"
                  style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80');">
               <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/80 backdrop-blur-md p-3 rounded border border-white/10 text-left">
                 <p id="hero-canvas-label" class="text-[10px] text-brand-gold uppercase tracking-wider font-bold">Featured Artwork</p>
@@ -265,7 +258,7 @@
           <!-- Mockups Showcase (Left) -->
           <div class="lg:col-span-7 flex flex-col md:flex-row gap-6 justify-center" data-aos="fade-right">
             <!-- Pillow Mockup -->
-            <div class="relative bg-slate-100 dark:bg-brand-midnight p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg text-center flex-1">
+            <div class="relative bg-slate-100 dark:bg-brand-midnight pt-12 pb-6 px-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg text-center flex-1">
               <span class="absolute top-4 left-4 bg-slate-900/80 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Mockup: Pillow</span>
               <div class="w-56 h-56 mx-auto relative overflow-hidden rounded-xl bg-white shadow-inner flex items-center justify-center">
                 <div id="pillow-pattern" class="pattern-preview-box w-full h-full" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400&q=80'); background-color: #F8FAFC;"></div>
@@ -274,7 +267,7 @@
             </div>
 
             <!-- Retail Bag Mockup -->
-            <div class="relative bg-slate-100 dark:bg-brand-midnight p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg text-center flex-1">
+            <div class="relative bg-slate-100 dark:bg-brand-midnight pt-12 pb-6 px-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg text-center flex-1">
               <span class="absolute top-4 left-4 bg-slate-900/80 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Mockup: Tote Bag</span>
               <div class="w-56 h-56 mx-auto relative overflow-hidden rounded-xl bg-white shadow-inner flex items-center justify-center">
                 <div id="bag-pattern" class="pattern-preview-box w-full h-full" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400&q=80'); background-color: #F8FAFC;"></div>
@@ -352,7 +345,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid lg:grid-cols-3 gap-8">
           <!-- Artist 1 -->
           <div class="bg-white dark:bg-brand-navy rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-md p-6 flex flex-col justify-between" data-aos="fade-up">
             <div class="space-y-4">
@@ -468,11 +461,11 @@
         </div>
 
         <!-- Horizontal Accordion / Flexible Flex Row -->
-        <div class="hidden md:flex min-h-[380px] w-full gap-4 overflow-hidden">
+        <div class="hidden lg:flex min-h-[380px] w-full gap-4 overflow-hidden">
           
           <!-- Card 1 -->
           <div onclick="expandWorkflow(1)" id="workflow-card-1" class="interactive-workflow-card expanded cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
-            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">01</span>
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 rtl:right-auto rtl:left-4 top-4 font-serif">01</span>
             <div class="space-y-4 max-w-sm">
               <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
                 <i class="fa-solid fa-paintbrush"></i>
@@ -489,7 +482,7 @@
 
           <!-- Card 2 -->
           <div onclick="expandWorkflow(2)" id="workflow-card-2" class="interactive-workflow-card cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
-            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">02</span>
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 rtl:right-auto rtl:left-4 top-4 font-serif">02</span>
             <div class="space-y-4 max-w-sm">
               <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
                 <i class="fa-solid fa-bezier-curve"></i>
@@ -506,7 +499,7 @@
 
           <!-- Card 3 -->
           <div onclick="expandWorkflow(3)" id="workflow-card-3" class="interactive-workflow-card cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
-            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">03</span>
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 rtl:right-auto rtl:left-4 top-4 font-serif">03</span>
             <div class="space-y-4 max-w-sm">
               <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
                 <i class="fa-solid fa-palette"></i>
@@ -523,7 +516,7 @@
 
           <!-- Card 4 -->
           <div onclick="expandWorkflow(4)" id="workflow-card-4" class="interactive-workflow-card cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
-            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">04</span>
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 rtl:right-auto rtl:left-4 top-4 font-serif">04</span>
             <div class="space-y-4 max-w-sm">
               <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
                 <i class="fa-solid fa-folder-open"></i>
@@ -540,28 +533,48 @@
         </div>
 
         <!-- Fallback Vertical Stack for Mobile viewports -->
-        <div class="flex md:hidden flex-col gap-4">
+        <div class="flex lg:hidden flex-col gap-4">
           <!-- Item 1 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
-            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 01</span>
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 01</span>
+              <div class="p-2 bg-brand-royal/10 text-brand-royal rounded-lg text-lg">
+                <i class="fa-solid fa-paintbrush"></i>
+              </div>
+            </div>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Hand-Painted Concept</h4>
             <p class="text-xs text-slate-500 leading-relaxed font-medium">Artists sketch and apply pigment (watercolor, ink, gouache, or digital canvas brush). We look for high aesthetic originality.</p>
           </div>
           <!-- Item 2 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
-            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 02</span>
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 02</span>
+              <div class="p-2 bg-brand-royal/10 text-brand-royal rounded-lg text-lg">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+            </div>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Digitization & Seam Matching</h4>
             <p class="text-xs text-slate-500 leading-relaxed font-medium">We perform high-resolution scans and align edges perfectly. Seamless tiles prevent print boundaries from showing on fabric rolls.</p>
           </div>
           <!-- Item 3 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
-            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 03</span>
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 03</span>
+              <div class="p-2 bg-brand-royal/10 text-brand-royal rounded-lg text-lg">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+            </div>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Pantone Color Coordination</h4>
             <p class="text-xs text-slate-500 leading-relaxed font-medium">We group elements into flat layer color channels and reference Pantone TCX/TPG books to keep manufacture colors uniform.</p>
           </div>
           <!-- Item 4 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
-            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 04</span>
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 04</span>
+              <div class="p-2 bg-brand-royal/10 text-brand-royal rounded-lg text-lg">
+                <i class="fa-solid fa-folder-open"></i>
+              </div>
+            </div>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Digital Delivery Package</h4>
             <p class="text-xs text-slate-500 leading-relaxed font-medium">Approved licensees receive high-resolution layered PSD, AI, or vector TIFF files with seamless repeat swatch blocks ready for manufacture.</p>
           </div>
@@ -576,11 +589,11 @@
           
           <!-- Estimator Inputs (Left) -->
           <div class="lg:col-span-6 space-y-6" data-aos="fade-right">
-            <div>
+            <div class="text-center lg:text-left rtl:lg:text-right">
               <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase font-semibold">Budget & Agreements</span>
               <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white font-bold">Art Licensing Fee Estimator</h2>
-              <div class="w-12 h-1 bg-brand-gold mt-4 mb-6"></div>
-              <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">
+              <div class="w-12 h-1 bg-brand-gold mt-4 mb-6 mx-auto lg:mx-0"></div>
+              <p class="text-slate-600 dark:text-slate-400 text-sm font-medium max-w-xl mx-auto lg:mx-0">
                 Get an instant estimate of licensing tiers, standard royalty percentage models, and deliverables checklists depending on your manufacture application.
               </p>
             </div>
@@ -611,7 +624,7 @@
               <!-- Exclusivity duration -->
               <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">3. Exclusivity Duration</label>
-                <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <div class="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 rtl:sm:space-x-reverse">
                   <label class="inline-flex items-center text-xs cursor-pointer text-slate-700 dark:text-slate-300 font-medium">
                     <input type="radio" name="estimator-exclusivity" value="non" checked onchange="runEstimator()" class="accent-brand-gold mr-2 rtl:ml-2">
                     Non-Exclusive
@@ -631,7 +644,7 @@
 
           <!-- Estimator Outputs (Right) -->
           <div class="lg:col-span-6" data-aos="fade-left">
-            <div class="bg-gradient-to-br from-brand-navy to-brand-midnight text-white p-8 rounded-2xl border border-white/10 shadow-xl space-y-6 relative overflow-hidden">
+            <div class="bg-gradient-to-br from-brand-navy to-brand-midnight text-white p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl space-y-6 relative overflow-hidden">
               <div class="absolute inset-0 opacity-5 pointer-events-none">
                 <div class="absolute top-0 right-0 w-48 h-48 bg-brand-royal rounded-full blur-2xl"></div>
               </div>
@@ -670,9 +683,9 @@
                 <!-- Request code form -->
                 <form id="estimator-portal-form" class="space-y-3">
                   <p class="text-[10px] text-slate-300 font-medium">Submit your corporate email to download the matching catalog collections:</p>
-                  <div class="flex gap-2 font-medium">
-                    <input type="email" id="estimator-portal-email" required placeholder="Enter corporate email" class="flex-grow bg-slate-900 border border-slate-700/80 text-white text-xs rounded px-3 py-2.5 focus:outline-none focus:border-brand-gold">
-                    <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded transition">
+                  <div class="flex flex-col sm:flex-row gap-2 font-medium">
+                    <input type="email" id="estimator-portal-email" required placeholder="Enter corporate email" class="w-full bg-slate-900 border border-slate-700/80 text-white text-xs rounded px-3 py-2.5 focus:outline-none focus:border-brand-gold">
+                    <button type="submit" class="w-full sm:w-auto bg-brand-gold hover:bg-white text-brand-navy font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded transition whitespace-nowrap">
                       Unlock Catalog
                     </button>
                   </div>
@@ -795,7 +808,7 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Overview -->
       <div class="space-y-4">
-        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
           <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
           <span>LICENSING</span>
         </a>
@@ -855,9 +868,9 @@
     </div>
 
     <!-- Bottom footer details -->
-    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 font-medium">
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col lg:flex-row items-center justify-between text-xs text-slate-500 font-medium gap-4 text-center lg:text-left rtl:lg:text-right">
       <p>&copy; 2026 Licensing Agency. All rights reserved. Creative assets are protected by copyright of respective artists.</p>
-      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0">
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 lg:mt-0 whitespace-nowrap">
         <a href="#" class="hover:text-slate-300">Privacy Policy</a>
         <span>&bull;</span>
         <a href="#" class="hover:text-slate-300">Terms of Use</a>

@@ -64,7 +64,7 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+    <nav class="hidden xl:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
       <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
@@ -73,12 +73,12 @@
         Home 2
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
-        Patterns
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
-      </a>
       <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Patterns
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
       <a href="licensing.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
@@ -96,7 +96,7 @@
     </nav>
 
     <!-- Toolbar controls -->
-    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
+    <div class="hidden xl:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
         <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
@@ -108,13 +108,12 @@
         RTL
       </button>
 
-      <!-- Portal Access (Login / Sign Up) -->
-      <a href="login.html" class="text-brand-navy dark:text-slate-300 hover:text-brand-gold text-xs font-semibold uppercase tracking-wider transition duration-300 px-3 py-2">Login</a>
+      <!-- Portal Access (Sign Up) -->
       <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
     </div>
 
     <!-- Mobile controls & Hamburger -->
-    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+    <div class="flex xl:hidden items-center space-x-2 rtl:space-x-reverse">
       <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
         <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
       </button>
@@ -125,21 +124,21 @@
   <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
     <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
     <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
-    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
     <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
     <a href="licensing.html" class="hover:text-brand-gold transition duration-300">Licensing</a>
     <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
     
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
-    <a href="login.html" class="hover:text-brand-gold transition duration-300 text-sm">Login</a>
     <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
     
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
     <div class="flex items-center space-x-6 mt-4">
       <!-- Mobile Theme Toggle -->
       <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
-        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-lg"></i>
+        <i class="fa-solid fa-moon moon-icon text-white text-lg"></i>
       </button>
       <!-- Mobile RTL Toggle -->
       <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
@@ -165,12 +164,12 @@
     <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
       <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
         <!-- Contact Cards Column -->
-        <div class="lg:col-span-4 space-y-6" data-aos="fade-right">
+        <div class="lg:col-span-5 xl:col-span-4 space-y-6" data-aos="fade-right">
           <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex space-x-4 rtl:space-x-reverse">
             <div class="text-brand-royal text-2xl"><i class="fa-solid fa-phone"></i></div>
             <div>
               <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Agency Telephone</h4>
-              <p class="text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">+1 (800) 555-ART-LYC</p>
+              <p class="text-sm xl:text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">+1 (800) 555-ART-LYC</p>
               <p class="text-xs text-slate-400 mt-0.5">Available 9 AM - 6 PM EST</p>
             </div>
           </div>
@@ -179,7 +178,7 @@
             <div class="text-brand-royal text-2xl"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Agency Email</h4>
-              <p class="text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">hello@licensingagency.com</p>
+              <p class="text-sm xl:text-base break-all font-semibold text-slate-600 dark:text-slate-300 mt-1">hello@licensingagency.com</p>
               <p class="text-xs text-slate-400 mt-0.5">Response within 24 hours</p>
             </div>
           </div>
@@ -188,7 +187,7 @@
             <div class="text-brand-royal text-2xl"><i class="fa-solid fa-building"></i></div>
             <div>
               <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Design Office</h4>
-              <p class="text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">600 Montgomery St, Floor 41</p>
+              <p class="text-sm xl:text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">600 Montgomery St, Floor 41</p>
               <p class="text-xs text-slate-400 mt-0.5">San Francisco, CA 94111</p>
             </div>
           </div>
@@ -209,7 +208,7 @@
         </div>
 
         <!-- Secure Form Column (Toggled Dual Form) -->
-        <div class="lg:col-span-8 bg-slate-50 dark:bg-brand-midnight p-8 md:p-10 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg" data-aos="fade-left">
+        <div class="lg:col-span-7 xl:col-span-8 bg-slate-50 dark:bg-brand-midnight p-8 md:p-10 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg" data-aos="fade-left">
           
           <!-- Form Selector Tabs -->
           <div class="flex border-b border-slate-200 dark:border-slate-800/80 mb-6">
@@ -409,7 +408,7 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Overview -->
       <div class="space-y-4">
-        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
           <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
           <span>LICENSING</span>
         </a>
@@ -469,9 +468,9 @@
     </div>
 
     <!-- Bottom footer details -->
-    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col lg:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center lg:text-left rtl:lg:text-right">
       <p>&copy; 2026 Licensing Agency. All rights reserved. Creative assets are protected by copyright of respective artists.</p>
-      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0 font-sans">
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 lg:mt-0 whitespace-nowrap font-sans">
         <a href="#" class="hover:text-slate-300">Privacy Policy</a>
         <span>&bull;</span>
         <a href="#" class="hover:text-slate-300">Terms of Use</a>
