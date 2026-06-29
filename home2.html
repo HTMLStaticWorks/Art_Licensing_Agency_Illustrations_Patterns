@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 | Premium Art & Illustration Licensing Agency</title>
+  <meta name="description" content="Explore our premium home 2 experience. World-class illustration licensing, interactive pattern customizer, and seasonal trend showcases.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home 2 | Premium Art & Illustration Licensing Agency">
+  <meta property="og:description" content="Representing elite surface designers and illustrators. High-end art licensing for fabric, stationery, and packaging.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A090B',
+              midnight: '#16141A',
+              royal: '#D76C5C',
+              slate: '#64748B',
+              teal: '#4A7C75',
+              gold: '#DEAB72',
+              silver: '#F1F5F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <style>
+    /* Unique elements for Home 2 */
+    .pattern-preview-box {
+      background-size: var(--pattern-scale, 100%) var(--pattern-scale, 100%);
+      background-repeat: repeat;
+      transition: background-image 0.5s ease, background-color 0.5s ease, background-size 0.2s ease;
+    }
+    
+    .interactive-workflow-card {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .interactive-workflow-card.expanded {
+      flex-grow: 2.5;
+    }
+    
+    /* Carousel styles inside artist card */
+    .artist-slide-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .custom-gradient-text {
+      background: linear-gradient(135deg, #DEAB72 0%, #D76C5C 50%, #4A7C75 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-royal via-brand-teal to-brand-gold z-50">
+    <div id="scroll-progress" class="h-full bg-brand-gold w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
+      <img src="logo.png" alt="Licensing Logo" class="h-10 w-auto rounded">
+      <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
+        LICENSING
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+      <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="home2.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home 2
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Patterns
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="licensing.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Licensing
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="blog.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Blog
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="contact.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Contact
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+    </nav>
+
+    <!-- Toolbar controls -->
+    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
+        <i class="fa-solid fa-moon moon-icon text-brand-navy dark:text-slate-300 text-sm"></i>
+      </button>
+
+      <!-- RTL Toggle -->
+      <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle text direction">
+        RTL
+      </button>
+
+      <!-- Portal Access (Login / Sign Up) -->
+      <a href="login.html" class="text-brand-navy dark:text-slate-300 hover:text-brand-gold text-xs font-semibold uppercase tracking-wider transition duration-300 px-3 py-2">Login</a>
+      <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
+    </div>
+
+    <!-- Mobile controls & Hamburger -->
+    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+      <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+        <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation Menu -->
+  <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
+    <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
+    <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
+    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
+    <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="licensing.html" class="hover:text-brand-gold transition duration-300">Licensing</a>
+    <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
+    <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <a href="login.html" class="hover:text-brand-gold transition duration-300 text-sm">Login</a>
+    <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <div class="flex items-center space-x-6 mt-4">
+      <!-- Mobile Theme Toggle -->
+      <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+      </button>
+      <!-- Mobile RTL Toggle -->
+      <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
+        RTL
+      </button>
+    </div>
+  </div>
+
+  <main class="flex-grow pt-20">
+    <!-- SECTION 1: Interactive Hero Showcase -->
+    <section id="hero-showcase" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 px-6 md:px-12 text-white bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(10, 9, 11, 0.85), rgba(22, 20, 26, 0.95)), url('hero2.png');">
+      <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <div class="absolute top-[10%] left-[5%] w-80 h-80 bg-brand-royal rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-[10%] right-[5%] w-96 h-96 bg-brand-teal rounded-full blur-3xl animate-float-delayed"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
+        <!-- Hero Text content (Left) -->
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-left rtl:lg:text-right" data-aos="fade-right">
+          <span class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
+            Premium Surface Designs
+          </span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight">
+            High-End Art.<br>
+            <span id="hero-gradient-title" class="custom-gradient-text font-serif">Seamlessly Licensed.</span>
+          </h1>
+          <p id="hero-description" class="text-slate-300 text-sm md:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            We represent premium illustrators and surface designers. Explore our catalog of repeat swatches, botanical paintings, and vector prints styled for luxury products.
+          </p>
+
+          <!-- Interactive Trend Board Tabs -->
+          <div class="bg-black/40 backdrop-blur-md p-1.5 rounded-lg inline-flex flex-wrap gap-1 border border-white/10 justify-center">
+            <button onclick="switchHeroTab('botanical')" id="hero-btn-botanical" class="hero-tab-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 bg-brand-royal text-white">
+              Japandi Florals
+            </button>
+            <button onclick="switchHeroTab('geometric')" id="hero-btn-geometric" class="hero-tab-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 text-slate-300 hover:text-white">
+              Mod Retro Geo
+            </button>
+            <button onclick="switchHeroTab('woodland')" id="hero-btn-woodland" class="hero-tab-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 text-slate-300 hover:text-white">
+              Whimsical Woods
+            </button>
+          </div>
+
+          <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 rtl:space-x-reverse justify-center lg:justify-start pt-2">
+            <a href="contact.html" class="px-8 py-3 bg-brand-royal text-white hover:bg-white hover:text-brand-navy font-semibold uppercase tracking-wider rounded transition duration-300 shadow-md text-center text-xs">
+              Request Design Access
+            </a>
+            <a href="patterns.html" class="px-8 py-3 bg-transparent border border-white/20 text-white hover:bg-white/10 font-semibold uppercase tracking-wider rounded transition duration-300 text-center text-xs">
+              View Patterns Grid
+            </a>
+          </div>
+        </div>
+
+        <!-- Overlapping Canvas Stack (Right) -->
+        <div class="lg:col-span-6 flex justify-center items-center relative min-h-[420px]" data-aos="zoom-in" data-aos-delay="200">
+          <div class="relative w-72 h-96 md:w-80 md:h-[420px]">
+            <!-- Canvas 1 (Back) -->
+            <div id="hero-img-back" class="absolute -left-8 -top-8 w-48 h-64 md:w-56 md:h-72 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform -rotate-6 hover:-rotate-3 transition-transform duration-500"
+                 style="background-image: url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80');">
+              <div class="absolute inset-0 bg-black/20 rounded-lg"></div>
+            </div>
+            <!-- Canvas 2 (Middle) -->
+            <div id="hero-img-middle" class="absolute -right-8 top-12 w-48 h-64 md:w-56 md:h-72 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform rotate-6 hover:rotate-3 transition-transform duration-500"
+                 style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80');">
+              <div class="absolute inset-0 bg-black/20 rounded-lg"></div>
+            </div>
+            <!-- Canvas 3 (Front Focus) -->
+            <div id="hero-img-front" class="absolute left-12 top-20 w-52 h-72 md:w-60 md:h-80 bg-cover bg-center rounded-lg shadow-2xl border border-white/10 transform hover:scale-105 transition-transform duration-500"
+                 style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80');">
+              <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/80 backdrop-blur-md p-3 rounded border border-white/10 text-left">
+                <p id="hero-canvas-label" class="text-[10px] text-brand-gold uppercase tracking-wider font-bold">Featured Artwork</p>
+                <p id="hero-canvas-title" class="text-xs font-serif font-semibold mt-0.5 text-white">Botanical Splendor Swatch</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Live Design Studio (Pattern Customizer) -->
+    <section id="design-studio" class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Live Design Studio</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Interactive Pattern Customizer</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+          <p class="text-slate-600 dark:text-slate-400 text-sm mt-4">
+            Toggle colorways, adjust scales, and visualize how our repeat pattern files conform onto luxury consumer mockup templates.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- Mockups Showcase (Left) -->
+          <div class="lg:col-span-7 flex flex-col md:flex-row gap-6 justify-center" data-aos="fade-right">
+            <!-- Pillow Mockup -->
+            <div class="relative bg-slate-100 dark:bg-brand-midnight p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg text-center flex-1">
+              <span class="absolute top-4 left-4 bg-slate-900/80 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Mockup: Pillow</span>
+              <div class="w-56 h-56 mx-auto relative overflow-hidden rounded-xl bg-white shadow-inner flex items-center justify-center">
+                <div id="pillow-pattern" class="pattern-preview-box w-full h-full" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400&q=80'); background-color: #F8FAFC;"></div>
+              </div>
+              <p class="text-xs text-slate-500 mt-4">Fine linen fabric texture repeat</p>
+            </div>
+
+            <!-- Retail Bag Mockup -->
+            <div class="relative bg-slate-100 dark:bg-brand-midnight p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg text-center flex-1">
+              <span class="absolute top-4 left-4 bg-slate-900/80 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Mockup: Tote Bag</span>
+              <div class="w-56 h-56 mx-auto relative overflow-hidden rounded-xl bg-white shadow-inner flex items-center justify-center">
+                <div id="bag-pattern" class="pattern-preview-box w-full h-full" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400&q=80'); background-color: #F8FAFC;"></div>
+              </div>
+              <p class="text-xs text-slate-500 mt-4">Rigid kraft paper or cotton canvas print</p>
+            </div>
+          </div>
+
+          <!-- Controls panel (Right) -->
+          <div class="lg:col-span-5 space-y-8 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-md" data-aos="fade-left">
+            <div>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Customize Artwork</h4>
+              <p class="text-xs text-slate-500 mt-1">Select from our seasonal repeat templates and configure parameters.</p>
+            </div>
+
+            <!-- Select Art Template -->
+            <div class="space-y-3">
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">1. Select Design Concept</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button onclick="setStudioDesign('florals')" id="studio-design-florals" class="studio-design-btn p-2 border border-brand-gold text-[10px] font-bold rounded uppercase tracking-wider bg-brand-gold/10 text-brand-gold text-center">
+                  Inky Florals
+                </button>
+                <button onclick="setStudioDesign('retro')" id="studio-design-retro" class="studio-design-btn p-2 border border-slate-300 dark:border-slate-700 text-[10px] font-bold rounded uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center">
+                  Mid-Mod Geo
+                </button>
+                <button onclick="setStudioDesign('foliage')" id="studio-design-foliage" class="studio-design-btn p-2 border border-slate-300 dark:border-slate-700 text-[10px] font-bold rounded uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center">
+                  Sage Leaves
+                </button>
+              </div>
+            </div>
+
+            <!-- Select Colorway -->
+            <div class="space-y-3">
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">2. Apply Colorway</label>
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <button onclick="setStudioColorway('#FFFFFF', 'light')" class="studio-color-btn w-8 h-8 rounded-full bg-slate-100 border-2 border-brand-gold" aria-label="Alabaster White"></button>
+                <button onclick="setStudioColorway('#DEAB72', 'gold')" class="studio-color-btn w-8 h-8 rounded-full bg-brand-gold border border-slate-300/30" aria-label="Saffron Gold"></button>
+                <button onclick="setStudioColorway('#4A7C75', 'teal')" class="studio-color-btn w-8 h-8 rounded-full bg-brand-teal border border-slate-300/30" aria-label="Sage Teal"></button>
+                <button onclick="setStudioColorway('#16141A', 'dark')" class="studio-color-btn w-8 h-8 rounded-full bg-brand-midnight border border-slate-300/30" aria-label="Midnight Navy"></button>
+              </div>
+              <p class="text-[10px] text-slate-400 italic">Color selected: <span id="studio-colorway-name" class="font-bold text-brand-gold">Alabaster White</span></p>
+            </div>
+
+            <!-- Adjust Scale -->
+            <div class="space-y-3">
+              <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                <span>3. Pattern Tile Scale</span>
+                <span id="studio-scale-label" class="text-brand-gold">100%</span>
+              </div>
+              <input type="range" min="40" max="180" value="100" class="w-full h-1 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold" id="studio-scale-slider" oninput="updateStudioScale(this.value)">
+              <div class="flex justify-between text-[9px] text-slate-400 uppercase tracking-widest">
+                <span>Micro Pattern</span>
+                <span>Macro Layout</span>
+              </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-slate-800 pt-4 flex justify-between items-center text-xs">
+              <span class="text-slate-400"><i class="fa-solid fa-circle-check text-brand-teal mr-1 rtl:ml-1"></i> Layered Vector AI available</span>
+              <a href="contact.html" class="text-brand-gold font-bold hover:underline">Inquire Custom Colors &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Curated Illustrators & Mini Slider -->
+    <section id="featured-artists" class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Represented Creators</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Featured Artist Spotlights</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+          <p class="text-slate-600 dark:text-slate-400 text-sm mt-4">
+            Meet the professional surface design illustrators behind our commercial repeat collection tiles.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Artist 1 -->
+          <div class="bg-white dark:bg-brand-navy rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-md p-6 flex flex-col justify-between" data-aos="fade-up">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Sarah Jenkins" class="w-16 h-16 rounded-full object-cover border-2 border-brand-gold">
+                <div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Sarah Jenkins</h4>
+                  <p class="text-xs text-brand-gold font-semibold">Organic Watercolors</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Specializes in intricate garden scenes, hand-painted floral coordinating prints, and washes suited for textiles and boutique greeting cards.
+              </p>
+            </div>
+
+            <!-- Mini Slider inside card -->
+            <div class="my-6 relative overflow-hidden rounded-lg bg-slate-100 dark:bg-brand-midnight h-32">
+              <div id="artist-slider-1" class="artist-slide-container h-full">
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=80')"></div>
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=400&q=80')"></div>
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400&q=80')"></div>
+              </div>
+              <button onclick="slideArtist(1, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 dark:bg-black/80 flex items-center justify-center text-xs hover:bg-white transition" aria-label="Previous image"><i class="fa-solid fa-chevron-left text-[8px] text-slate-800 dark:text-white"></i></button>
+              <button onclick="slideArtist(1, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 dark:bg-black/80 flex items-center justify-center text-xs hover:bg-white transition" aria-label="Next image"><i class="fa-solid fa-chevron-right text-[8px] text-slate-800 dark:text-white"></i></button>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Watercolors</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Botanical</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Stationery</span>
+            </div>
+          </div>
+
+          <!-- Artist 2 -->
+          <div class="bg-white dark:bg-brand-navy rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-md p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Leo Vance" class="w-16 h-16 rounded-full object-cover border-2 border-brand-gold">
+                <div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Leo Vance</h4>
+                  <p class="text-xs text-brand-gold font-semibold">Playful Gouache</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Known for cheerful woodland creatures, geometric abstracts, and pastel collections perfect for infants wear, toys, and wallpaper borders.
+              </p>
+            </div>
+
+            <!-- Mini Slider inside card -->
+            <div class="my-6 relative overflow-hidden rounded-lg bg-slate-100 dark:bg-brand-midnight h-32">
+              <div id="artist-slider-2" class="artist-slide-container h-full">
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80')"></div>
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80')"></div>
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400&q=80')"></div>
+              </div>
+              <button onclick="slideArtist(2, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 dark:bg-black/80 flex items-center justify-center text-xs hover:bg-white transition" aria-label="Previous image"><i class="fa-solid fa-chevron-left text-[8px] text-slate-800 dark:text-white"></i></button>
+              <button onclick="slideArtist(2, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 dark:bg-black/80 flex items-center justify-center text-xs hover:bg-white transition" aria-label="Next image"><i class="fa-solid fa-chevron-right text-[8px] text-slate-800 dark:text-white"></i></button>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Gouache</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Childrens</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Apparel</span>
+            </div>
+          </div>
+
+          <!-- Artist 3 -->
+          <div class="bg-white dark:bg-brand-navy rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-md p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Sofia Sterling" class="w-16 h-16 rounded-full object-cover border-2 border-brand-gold">
+                <div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Sofia Sterling</h4>
+                  <p class="text-xs text-brand-gold font-semibold">Retro Geometrics</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Pioneering vector layout files with bold palettes, abstract shapes, and mathematical tiles optimized for packaging coordinates.
+              </p>
+            </div>
+
+            <!-- Mini Slider inside card -->
+            <div class="my-6 relative overflow-hidden rounded-lg bg-slate-100 dark:bg-brand-midnight h-32">
+              <div id="artist-slider-3" class="artist-slide-container h-full">
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80')"></div>
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=400&q=80')"></div>
+                <div class="min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=400&q=80')"></div>
+              </div>
+              <button onclick="slideArtist(3, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 dark:bg-black/80 flex items-center justify-center text-xs hover:bg-white transition" aria-label="Previous image"><i class="fa-solid fa-chevron-left text-[8px] text-slate-800 dark:text-white"></i></button>
+              <button onclick="slideArtist(3, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 dark:bg-black/80 flex items-center justify-center text-xs hover:bg-white transition" aria-label="Next image"><i class="fa-solid fa-chevron-right text-[8px] text-slate-800 dark:text-white"></i></button>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Vector</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Retro</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-[9px] uppercase tracking-wider font-semibold">Packaging</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Interactive Process Journey -->
+    <section id="curation-journey" class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">The Curation Journey</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">How We Curate Repeat Artwork</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+          <p class="text-slate-600 dark:text-slate-400 text-sm mt-4 font-medium">
+            Click on each pipeline phase to see how we refine raw designs into manufacturing-ready digital repeat deliverables.
+          </p>
+        </div>
+
+        <!-- Horizontal Accordion / Flexible Flex Row -->
+        <div class="hidden md:flex min-h-[380px] w-full gap-4 overflow-hidden">
+          
+          <!-- Card 1 -->
+          <div onclick="expandWorkflow(1)" id="workflow-card-1" class="interactive-workflow-card expanded cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">01</span>
+            <div class="space-y-4 max-w-sm">
+              <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
+                <i class="fa-solid fa-paintbrush"></i>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Hand-Painted Concept</h4>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium workflow-detail">
+                Artists sketch and apply pigment (watercolor, ink, gouache, or digital canvas brush). We look for high aesthetic originality.
+              </p>
+            </div>
+            <div class="text-xs font-bold text-brand-gold flex items-center group-hover:translate-x-1 transition-transform">
+              <span class="workflow-btn-label">Active Phase Detail</span> <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180"></i>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div onclick="expandWorkflow(2)" id="workflow-card-2" class="interactive-workflow-card cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">02</span>
+            <div class="space-y-4 max-w-sm">
+              <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Digitization & Seam Matching</h4>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium hidden workflow-detail">
+                We perform high-resolution scans and align edges perfectly. Seamless tiles prevent print boundaries from showing on fabric rolls.
+              </p>
+            </div>
+            <div class="text-xs font-bold text-brand-gold flex items-center group-hover:translate-x-1 transition-transform">
+              <span class="workflow-btn-label">Expand Details</span> <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180"></i>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div onclick="expandWorkflow(3)" id="workflow-card-3" class="interactive-workflow-card cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">03</span>
+            <div class="space-y-4 max-w-sm">
+              <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Pantone Color Coordination</h4>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium hidden workflow-detail">
+                We group elements into flat layer color channels and reference Pantone TCX/TPG books to keep manufacture colors uniform.
+              </p>
+            </div>
+            <div class="text-xs font-bold text-brand-gold flex items-center group-hover:translate-x-1 transition-transform">
+              <span class="workflow-btn-label">Expand Details</span> <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180"></i>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div onclick="expandWorkflow(4)" id="workflow-card-4" class="interactive-workflow-card cursor-pointer flex-1 bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between relative overflow-hidden group">
+            <span class="text-6xl font-bold text-brand-royal/10 absolute right-4 top-4 font-serif">04</span>
+            <div class="space-y-4 max-w-sm">
+              <div class="p-3 bg-brand-royal/10 text-brand-royal rounded-lg text-2xl w-fit">
+                <i class="fa-solid fa-folder-open"></i>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Digital Delivery Package</h4>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium hidden workflow-detail">
+                Approved licensees receive high-resolution layered PSD, AI, or vector TIFF files with seamless repeat swatch blocks ready for manufacture.
+              </p>
+            </div>
+            <div class="text-xs font-bold text-brand-gold flex items-center group-hover:translate-x-1 transition-transform">
+              <span class="workflow-btn-label">Expand Details</span> <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fallback Vertical Stack for Mobile viewports -->
+        <div class="flex md:hidden flex-col gap-4">
+          <!-- Item 1 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
+            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 01</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Hand-Painted Concept</h4>
+            <p class="text-xs text-slate-500 leading-relaxed font-medium">Artists sketch and apply pigment (watercolor, ink, gouache, or digital canvas brush). We look for high aesthetic originality.</p>
+          </div>
+          <!-- Item 2 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
+            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 02</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Digitization & Seam Matching</h4>
+            <p class="text-xs text-slate-500 leading-relaxed font-medium">We perform high-resolution scans and align edges perfectly. Seamless tiles prevent print boundaries from showing on fabric rolls.</p>
+          </div>
+          <!-- Item 3 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
+            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 03</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Pantone Color Coordination</h4>
+            <p class="text-xs text-slate-500 leading-relaxed font-medium">We group elements into flat layer color channels and reference Pantone TCX/TPG books to keep manufacture colors uniform.</p>
+          </div>
+          <!-- Item 4 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 space-y-2">
+            <span class="text-xs font-bold text-brand-royal uppercase font-semibold">Phase 04</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Digital Delivery Package</h4>
+            <p class="text-xs text-slate-500 leading-relaxed font-medium">Approved licensees receive high-resolution layered PSD, AI, or vector TIFF files with seamless repeat swatch blocks ready for manufacture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Licensing Fee Estimator Widget -->
+    <section id="licensing-estimator" class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Estimator Inputs (Left) -->
+          <div class="lg:col-span-6 space-y-6" data-aos="fade-right">
+            <div>
+              <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase font-semibold">Budget & Agreements</span>
+              <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white font-bold">Art Licensing Fee Estimator</h2>
+              <div class="w-12 h-1 bg-brand-gold mt-4 mb-6"></div>
+              <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">
+                Get an instant estimate of licensing tiers, standard royalty percentage models, and deliverables checklists depending on your manufacture application.
+              </p>
+            </div>
+
+            <!-- Parameters form -->
+            <form class="space-y-4 bg-white dark:bg-brand-navy p-6 rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-md">
+              <!-- Select Category -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">1. Select Application Category</label>
+                <select id="estimator-category" onchange="runEstimator()" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700/85 text-slate-800 dark:text-white text-xs rounded p-2.5 focus:outline-none focus:border-brand-gold">
+                  <option value="fabric">Fabric & Apparel Rolls</option>
+                  <option value="stationery">Stationery & Paper Goods</option>
+                  <option value="packaging">Beauty & Cosmetics Packaging</option>
+                  <option value="homeware">Home Decor Goods & Wallpaper</option>
+                </select>
+              </div>
+
+              <!-- Slider Exclusivity -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">2. Desired Production Volume</label>
+                <select id="estimator-volume" onchange="runEstimator()" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700/85 text-slate-800 dark:text-white text-xs rounded p-2.5 focus:outline-none focus:border-brand-gold">
+                  <option value="boutique">Boutique run (&lt; 1,500 units)</option>
+                  <option value="commercial">Commercial production (1,500 - 15,000 units)</option>
+                  <option value="mass">Mass Retail (15,000+ units)</option>
+                </select>
+              </div>
+
+              <!-- Exclusivity duration -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">3. Exclusivity Duration</label>
+                <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                  <label class="inline-flex items-center text-xs cursor-pointer text-slate-700 dark:text-slate-300 font-medium">
+                    <input type="radio" name="estimator-exclusivity" value="non" checked onchange="runEstimator()" class="accent-brand-gold mr-2 rtl:ml-2">
+                    Non-Exclusive
+                  </label>
+                  <label class="inline-flex items-center text-xs cursor-pointer text-slate-700 dark:text-slate-300 font-medium">
+                    <input type="radio" name="estimator-exclusivity" value="excl" onchange="runEstimator()" class="accent-brand-gold mr-2 rtl:ml-2">
+                    1-Year Exclusive
+                  </label>
+                  <label class="inline-flex items-center text-xs cursor-pointer text-slate-700 dark:text-slate-300 font-medium">
+                    <input type="radio" name="estimator-exclusivity" value="long" onchange="runEstimator()" class="accent-brand-gold mr-2 rtl:ml-2">
+                    3-Year Exclusive
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Estimator Outputs (Right) -->
+          <div class="lg:col-span-6" data-aos="fade-left">
+            <div class="bg-gradient-to-br from-brand-navy to-brand-midnight text-white p-8 rounded-2xl border border-white/10 shadow-xl space-y-6 relative overflow-hidden">
+              <div class="absolute inset-0 opacity-5 pointer-events-none">
+                <div class="absolute top-0 right-0 w-48 h-48 bg-brand-royal rounded-full blur-2xl"></div>
+              </div>
+
+              <!-- Output Header -->
+              <div>
+                <span class="text-[10px] text-brand-gold font-bold uppercase tracking-wider font-semibold">Calculated License Tier</span>
+                <h3 id="result-tier-title" class="text-2xl font-bold font-serif mt-1 text-white font-bold">Standard Commercial Swatch</h3>
+                <p id="result-tier-desc" class="text-xs text-slate-400 mt-1 font-medium">Recommended for standard print volume in local territories.</p>
+              </div>
+
+              <!-- Cost indicators -->
+              <div class="grid grid-cols-2 gap-4 border-y border-white/10 py-6">
+                <div>
+                  <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold block">Typical Royalty Rate</span>
+                  <span id="result-royalty-rate" class="text-3xl font-extrabold text-brand-gold font-serif mt-1 block">5% - 7%</span>
+                </div>
+                <div>
+                  <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold block">Advance Fee Bracket</span>
+                  <span id="result-advance-fee" class="text-3xl font-extrabold text-white font-serif mt-1 block">$1,200</span>
+                </div>
+              </div>
+
+              <!-- Deliverable checklist -->
+              <div class="space-y-3">
+                <span class="text-[10px] text-slate-300 font-bold uppercase tracking-wider block font-semibold">Standard Deliverables Included:</span>
+                <ul class="text-xs text-slate-400 space-y-2 font-medium" id="result-checklist">
+                  <li><i class="fa-solid fa-check text-brand-teal mr-2 rtl:ml-2"></i>Seamless pattern tile in layered PSD/AI</li>
+                  <li><i class="fa-solid fa-check text-brand-teal mr-2 rtl:ml-2"></i>Two alternate base colorway configurations</li>
+                  <li><i class="fa-solid fa-check text-brand-teal mr-2 rtl:ml-2"></i>Pantone matching color chart records</li>
+                </ul>
+              </div>
+
+              <!-- Portal access trigger -->
+              <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                <!-- Request code form -->
+                <form id="estimator-portal-form" class="space-y-3">
+                  <p class="text-[10px] text-slate-300 font-medium">Submit your corporate email to download the matching catalog collections:</p>
+                  <div class="flex gap-2 font-medium">
+                    <input type="email" id="estimator-portal-email" required placeholder="Enter corporate email" class="flex-grow bg-slate-900 border border-slate-700/80 text-white text-xs rounded px-3 py-2.5 focus:outline-none focus:border-brand-gold">
+                    <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded transition">
+                      Unlock Catalog
+                    </button>
+                  </div>
+                  <span id="estimator-portal-error" class="text-[10px] text-red-400 block mt-1 font-medium"></span>
+                </form>
+
+                <!-- Success state inside estimator -->
+                <div id="estimator-portal-success" class="hidden text-center py-4 space-y-3">
+                  <div class="w-10 h-10 bg-brand-royal/10 text-brand-royal rounded-full flex items-center justify-center mx-auto text-lg">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <h4 class="text-sm font-bold text-white">Access Key Generated</h4>
+                  <p class="text-xs text-slate-300 font-medium">Catalog details have been dispatched to <strong id="estimator-portal-result-email" class="text-white font-bold"></strong>. A designer will contact you shortly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Agency Help Accordions & Brief Commission -->
+    <section id="support-help" class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12">
+          
+          <!-- Accordion FAQ (Left) -->
+          <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+            <div>
+              <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase font-semibold">Common Inquiries</span>
+              <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white font-bold">Licensing Help Hub</h2>
+              <div class="w-12 h-1 bg-brand-gold mt-4"></div>
+            </div>
+
+            <!-- Accordion items -->
+            <div class="space-y-4 mt-8">
+              <!-- Item 1 -->
+              <div class="border-b border-slate-200 dark:border-slate-800/80 pb-4">
+                <button class="accordion-header w-full flex justify-between items-center text-left rtl:text-right font-serif font-bold text-slate-900 dark:text-white hover:text-brand-gold transition duration-300 py-2" aria-expanded="false">
+                  <span>How are royalties calculated?</span>
+                  <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content hidden mt-2 text-xs text-slate-500 leading-relaxed font-medium">
+                  Royalties are typically calculated as a percentage of gross sales or wholesale revenue from the products utilizing the designs. Rates vary between 4% and 10% based on production quantity, retail presence, and licensing exclusivity terms.
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="border-b border-slate-200 dark:border-slate-800/80 pb-4">
+                <button class="accordion-header w-full flex justify-between items-center text-left rtl:text-right font-serif font-bold text-slate-900 dark:text-white hover:text-brand-gold transition duration-300 py-2" aria-expanded="false">
+                  <span>Can I request custom colorway changes?</span>
+                  <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content hidden mt-2 text-xs text-slate-500 leading-relaxed font-medium">
+                  Yes. All repeating design swatches are provided in layered digital files (PSD with separate color plates, or AI vector files). Our represented designers are available to adjust colorways to align with your brand’s seasonal palette coordinates.
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="border-b border-slate-200 dark:border-slate-800/80 pb-4">
+                <button class="accordion-header w-full flex justify-between items-center text-left rtl:text-right font-serif font-bold text-slate-900 dark:text-white hover:text-brand-gold transition duration-300 py-2" aria-expanded="false">
+                  <span>Do you support bespoke commissions?</span>
+                  <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content hidden mt-2 text-xs text-slate-500 leading-relaxed font-medium">
+                  Absolutely. If our active repeat pattern library doesn’t have the exact coordinate theme you need, you can collaborate directly with our artists to commission bespoke prints matching your brand brief.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brief Submission Form (Right) -->
+          <div class="lg:col-span-5" data-aos="fade-left">
+            <div class="bg-slate-50 dark:bg-brand-midnight p-8 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-md">
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Bespoke Design Inquiry</h4>
+              <p class="text-xs text-slate-500 mb-6 font-medium">Looking for custom prints? Outline your design brief and our agents will match you with the ideal illustrator.</p>
+
+              <form id="design-brief-form" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Brand or Company Name</label>
+                  <input type="text" id="brief-company" required placeholder="Enter company name" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700/85 text-slate-800 dark:text-white text-xs rounded px-3 py-2.5 focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Aesthetic Brief details</label>
+                  <textarea id="brief-details" required rows="3" placeholder="e.g. Vintage botanical wallpaper coordinates with mustard watercolor details" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700/85 text-slate-800 dark:text-white text-xs rounded px-3 py-2.5 focus:outline-none focus:border-brand-gold"></textarea>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Business Email</label>
+                  <input type="email" id="brief-email" required placeholder="Enter professional email" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700/85 text-slate-800 dark:text-white text-xs rounded px-3 py-2.5 focus:outline-none focus:border-brand-gold">
+                  <span id="brief-email-error" class="text-[10px] text-red-500 block mt-1 font-medium"></span>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-gold hover:bg-white text-brand-navy font-bold text-xs uppercase tracking-widest py-3 rounded transition duration-300">
+                  Submit Design Brief
+                </button>
+              </form>
+
+              <!-- Success State -->
+              <div id="brief-success" class="hidden text-center py-6 space-y-4">
+                <div class="w-14 h-14 bg-brand-royal/10 text-brand-royal rounded-full flex items-center justify-center mx-auto text-xl">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white font-bold">Brief Submission Confirmed</h4>
+                <p class="text-xs text-slate-500 font-medium">Thank you. Your custom design request has been received. Our agents are evaluating portfolios to match <strong id="brief-result-company" class="text-slate-900 dark:text-white font-bold"></strong>.</p>
+                <div class="p-3 bg-brand-gold/10 rounded text-[11px] text-brand-gold font-semibold">
+                  A matches summary report will be sent to <span id="brief-result-email" class="underline"></span>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Col 1: Overview -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+          <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
+          <span>LICENSING</span>
+        </a>
+        <p class="text-sm text-slate-400 font-medium">
+          Professional art licensing agency representing world-class illustrators and surface designers for fabrics, stationery, packaging, and branding campaigns.
+        </p>
+        <div class="flex space-x-4 rtl:space-x-reverse text-lg text-slate-400">
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4 font-bold">Licensing Categories</h4>
+        <ul class="space-y-2 text-sm font-medium">
+          <li><a href="#" class="hover:text-brand-gold transition">Fabric & Textiles</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Stationery & Paper Goods</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Packaging & Cosmetics</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Home Decor & Wallpaper</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Custom Commissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4 font-bold">Agency Links</h4>
+        <ul class="space-y-2 text-sm font-medium">
+          <li><a href="index.html" class="hover:text-brand-gold transition">Home Page</a></li>
+          <li><a href="home2.html" class="hover:text-brand-gold transition">Home 2 Page</a></li>
+          <li><a href="patterns.html" class="hover:text-brand-gold transition">Patterns & Styles</a></li>
+          <li><a href="about.html" class="hover:text-brand-gold transition">About the Agency</a></li>
+          <li><a href="licensing.html" class="hover:text-brand-gold transition">Licensing Portfolio</a></li>
+          <li><a href="blog.html" class="hover:text-brand-gold transition">Creative Blog</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition">Contact & Submissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="space-y-4">
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4 font-bold font-serif">Creative Newsletter</h4>
+        <p class="text-sm font-medium">Subscribe to receive monthly catalog updates, designer spotlights, and surface pattern trend reports.</p>
+        <form class="validated-form relative flex flex-col space-y-2">
+          <div class="relative font-medium font-sans">
+            <input type="email" required placeholder="Enter your email" class="w-full bg-slate-900 border border-slate-700/50 text-white text-xs px-3 py-2.5 rounded focus:outline-none focus:border-brand-gold transition">
+            <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+          </div>
+          <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-semibold uppercase tracking-wider py-2.5 rounded transition">
+            Subscribe
+          </button>
+          <div class="form-success-banner hidden text-[11px] text-brand-gold font-semibold mt-2">
+            Successfully subscribed! Thank you for joining our community.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom footer details -->
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 font-medium">
+      <p>&copy; 2026 Licensing Agency. All rights reserved. Creative assets are protected by copyright of respective artists.</p>
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0">
+        <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="#" class="hover:text-slate-300">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-to-top" class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-navy p-3 rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <!-- Main Script -->
+  <script src="main.js" defer></script>
+
+  <!-- Special Interactivity for Home 2 Page -->
+  <script>
+    // Section 1: Hero Showcase Switcher
+    const heroContent = {
+      botanical: {
+        title: "High-End Art.<br><span class='custom-gradient-text font-serif'>Seamlessly Licensed.</span>",
+        desc: "We represent premium illustrators and surface designers. Explore our catalog of repeat swatches, botanical paintings, and vector prints styled for luxury products.",
+        label: "Featured Artwork",
+        canvasTitle: "Botanical Splendor Swatch",
+        backImg: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80",
+        middleImg: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80",
+        frontImg: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80"
+      },
+      geometric: {
+        title: "Bold Layouts.<br><span class='custom-gradient-text font-serif'>Modern Packaging.</span>",
+        desc: "Make your boxes, greeting cards, and stationery standout with retro geometric layouts, bauhaus tiles, and sleek lines colored in seasonal trends.",
+        label: "Mid-Century Tile",
+        canvasTitle: "Bauhaus Grid Coordinate",
+        backImg: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=500&q=80",
+        middleImg: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=500&q=80",
+        frontImg: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80"
+      },
+      woodland: {
+        title: "Playful Prints.<br><span class='custom-gradient-text font-serif'>Whimsical Nursery.</span>",
+        desc: "Delicate gouache illustrations and crayon coordinates built specifically for luxury children's apparel, wrapping sheets, and organic nursery linens.",
+        label: "Nursery Print",
+        canvasTitle: "Woodland Forest Friends",
+        backImg: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=500&q=80",
+        middleImg: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=500&q=80",
+        frontImg: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80"
+      }
+    };
+
+    function switchHeroTab(tabKey) {
+      // Toggle button active styling
+      document.querySelectorAll('.hero-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-royal', 'text-white');
+        btn.classList.add('text-slate-300', 'hover:text-white');
+      });
+      const activeBtn = document.getElementById(`hero-btn-${tabKey}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-brand-royal', 'text-white');
+        activeBtn.classList.remove('text-slate-300', 'hover:text-white');
+      }
+
+      // Update text
+      const data = heroContent[tabKey];
+      document.getElementById('hero-gradient-title').parentElement.innerHTML = data.title;
+      document.getElementById('hero-description').textContent = data.desc;
+      document.getElementById('hero-canvas-label').textContent = data.label;
+      document.getElementById('hero-canvas-title').textContent = data.canvasTitle;
+
+      // Update Images with transitions
+      document.getElementById('hero-img-back').style.backgroundImage = `url('${data.backImg}')`;
+      document.getElementById('hero-img-middle').style.backgroundImage = `url('${data.middleImg}')`;
+      document.getElementById('hero-img-front').style.backgroundImage = `url('${data.frontImg}')`;
+    }
+
+    // Section 2: Live Design Studio Customizer
+    const studioDesigns = {
+      florals: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400&q=80",
+      retro: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80",
+      foliage: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=400&q=80"
+    };
+
+    let activeStudioDesignUrl = studioDesigns.florals;
+    let activeStudioBgColor = "#FFFFFF";
+
+    function setStudioDesign(designKey) {
+      document.querySelectorAll('.studio-design-btn').forEach(btn => {
+        btn.classList.remove('border-brand-gold', 'bg-brand-gold/10', 'text-brand-gold');
+        btn.classList.add('border-slate-300', 'dark:border-slate-700', 'text-slate-500', 'dark:text-slate-400');
+      });
+      
+      const activeBtn = document.getElementById(`studio-design-${designKey}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('border-slate-300', 'dark:border-slate-700', 'text-slate-500', 'dark:text-slate-400');
+        activeBtn.classList.add('border-brand-gold', 'bg-brand-gold/10', 'text-brand-gold');
+      }
+
+      activeStudioDesignUrl = studioDesigns[designKey];
+      applyStudioMockup();
+    }
+
+    function setStudioColorway(colorHex, name) {
+      activeStudioBgColor = colorHex;
+      document.getElementById('studio-colorway-name').textContent = name.charAt(0).toUpperCase() + name.slice(1) + " (" + colorHex + ")";
+      applyStudioMockup();
+    }
+
+    function updateStudioScale(val) {
+      document.getElementById('studio-scale-label').textContent = `${val}%`;
+      const scaledVal = val + "%";
+      document.getElementById('pillow-pattern').style.setProperty('--pattern-scale', scaledVal);
+      document.getElementById('bag-pattern').style.setProperty('--pattern-scale', scaledVal);
+    }
+
+    function applyStudioMockup() {
+      const pillow = document.getElementById('pillow-pattern');
+      const bag = document.getElementById('bag-pattern');
+      
+      if (pillow && bag) {
+        pillow.style.backgroundImage = `url('${activeStudioDesignUrl}')`;
+        pillow.style.backgroundColor = activeStudioBgColor;
+        
+        bag.style.backgroundImage = `url('${activeStudioDesignUrl}')`;
+        bag.style.backgroundColor = activeStudioBgColor;
+      }
+    }
+
+    // Section 3: Curated Illustrators Carousels
+    const artistSliderIndices = { 1: 0, 2: 0, 3: 0 };
+    function slideArtist(artistId, direction) {
+      const slider = document.getElementById(`artist-slider-${artistId}`);
+      if (!slider) return;
+
+      const totalSlides = slider.children.length;
+      let idx = artistSliderIndices[artistId];
+      
+      idx = (idx + direction + totalSlides) % totalSlides;
+      artistSliderIndices[artistId] = idx;
+      
+      slider.style.transform = `translateX(-${idx * 100}%)`;
+    }
+
+    // Section 4: Expandable Workflow Accordion
+    function expandWorkflow(cardId) {
+      document.querySelectorAll('.interactive-workflow-card').forEach(card => {
+        card.classList.remove('expanded');
+        card.querySelector('.workflow-detail').classList.add('hidden');
+        card.querySelector('.workflow-btn-label').textContent = "Expand Details";
+      });
+
+      const selectedCard = document.getElementById(`workflow-card-${cardId}`);
+      if (selectedCard) {
+        selectedCard.classList.add('expanded');
+        selectedCard.querySelector('.workflow-detail').classList.remove('hidden');
+        selectedCard.querySelector('.workflow-btn-label').textContent = "Active Phase Detail";
+      }
+    }
+
+    // Section 5: Dynamic License Estimator Calculator
+    const licensingPricing = {
+      fabric: { boutique: { fee: 900, royalty: "4% - 6%" }, commercial: { fee: 2400, royalty: "6% - 8%" }, mass: { fee: 7500, royalty: "8% - 10%" } },
+      stationery: { boutique: { fee: 500, royalty: "5% - 7%" }, commercial: { fee: 1500, royalty: "7% - 9%" }, mass: { fee: 4000, royalty: "9% - 11%" } },
+      packaging: { boutique: { fee: 1200, royalty: "6% - 8%" }, commercial: { fee: 3500, royalty: "8% - 10%" }, mass: { fee: 9500, royalty: "10% - 12%" } },
+      homeware: { boutique: { fee: 1500, royalty: "5% - 8%" }, commercial: { fee: 4500, royalty: "8% - 10%" }, mass: { fee: 12000, royalty: "10% - 13%" } }
+    };
+
+    function runEstimator() {
+      const category = document.getElementById('estimator-category').value;
+      const volume = document.getElementById('estimator-volume').value;
+      const exclusivity = document.querySelector('input[name="estimator-exclusivity"]:checked').value;
+
+      const data = licensingPricing[category][volume];
+      let fee = data.fee;
+      let royalty = data.royalty;
+      let tierTitle = "Standard Swatch License";
+      let tierDesc = "Recommended for standard print volume in local territories.";
+
+      // Modify values based on exclusivity multipliers
+      if (exclusivity === 'excl') {
+        fee = Math.round(fee * 1.5);
+        tierTitle = "Exclusive Regional License";
+        tierDesc = "Exclusive release rights within selected retail territory for 1 year.";
+      } else if (exclusivity === 'long') {
+        fee = Math.round(fee * 2.2);
+        tierTitle = "Perpetual Strategic License";
+        tierDesc = "Multi-year category exclusivity with vector master delivery.";
+      } else {
+        if (volume === 'mass') {
+          tierTitle = "Enterprise Global License";
+          tierDesc = "High-output product print runs across global physical channels.";
+        } else if (volume === 'boutique') {
+          tierTitle = "Boutique Creative License";
+          tierDesc = "Micro run licensing suited for local independent web stores.";
+        }
+      }
+
+      document.getElementById('result-tier-title').textContent = tierTitle;
+      document.getElementById('result-tier-desc').textContent = tierDesc;
+      document.getElementById('result-royalty-rate').textContent = royalty;
+      document.getElementById('result-advance-fee').textContent = "$" + fee.toLocaleString();
+
+      // Update checklists dynamically
+      const checklist = document.getElementById('result-checklist');
+      checklist.innerHTML = '';
+      const items = [
+        "Seamless pattern tile file in layered format",
+        exclusivity !== 'non' ? "Exclusive category production shield" : "Standard non-exclusive directory access",
+        volume === 'mass' ? "Layered vector AI master file delivery" : "Standard high-resolution swatch tiles"
+      ];
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="fa-solid fa-check text-brand-teal mr-2 rtl:ml-2"></i>${item}`;
+        checklist.appendChild(li);
+      });
+    }
+
+    // Run estimator once on load
+    runEstimator();
+
+    // Portal Form submission
+    const portalForm = document.getElementById('estimator-portal-form');
+    if (portalForm) {
+      portalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('estimator-portal-email').value.trim();
+        const errorSpan = document.getElementById('estimator-portal-error');
+        
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          if (errorSpan) errorSpan.textContent = "Please enter a valid business email";
+          return;
+        } else {
+          if (errorSpan) errorSpan.textContent = "";
+        }
+
+        document.getElementById('estimator-portal-result-email').textContent = email;
+        portalForm.classList.add('hidden');
+        document.getElementById('estimator-portal-success').classList.remove('hidden');
+      });
+    }
+
+    // Design Brief Form submission
+    const briefForm = document.getElementById('design-brief-form');
+    if (briefForm) {
+      briefForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const company = document.getElementById('brief-company').value.trim();
+        const email = document.getElementById('brief-email').value.trim();
+        const errorSpan = document.getElementById('brief-email-error');
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          if (errorSpan) errorSpan.textContent = "Please enter a valid professional email";
+          return;
+        } else {
+          if (errorSpan) errorSpan.textContent = "";
+        }
+
+        document.getElementById('brief-result-company').textContent = company;
+        document.getElementById('brief-result-email').textContent = email;
+        
+        briefForm.classList.add('hidden');
+        document.getElementById('brief-success').classList.remove('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

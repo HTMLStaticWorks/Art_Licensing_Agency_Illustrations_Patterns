@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A090B;
+}
+::-webkit-scrollbar-thumb {
+  background: #357068;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DEAB72; /* Warm Gold hover */
+}
+
+/* Glassmorphism Accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-panel {
+  background: rgba(7, 26, 47, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom RTL Alignments */
+[dir="rtl"] {
+  text-align: right;
+}
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-delayed {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(15px) rotate(-3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-bg 15s ease infinite;
+}
+
+/* Custom Cards border glow & lift effects */
+.hover-glow {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-glow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(222, 171, 114, 0.15);
+  border-color: rgba(222, 171, 114, 0.4);
+}
+
+/* Timeline Custom styles */
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #DEAB72;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  transform-origin: left;
+}
+[dir="rtl"] #scroll-progress {
+  transform-origin: right;
+}
+
+/* Sticky Header Styles */
+#header {
+  transition: background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+}
+
+/* When scrolled, add background */
+#header.scrolled {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark #header.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Global Dark Mode overrides for dark creative backgrounds */
+html.dark,
+.dark body {
+  background-color: #0A090B !important;
+}
+
+/* Base backgrounds */
+.dark .bg-brand-navy,
+.dark .dark\:bg-brand-navy,
+.dark [class*="bg-brand-navy"],
+.dark [class*="dark:bg-brand-navy"] {
+  background-color: #0A090B !important;
+}
+
+/* Secondary dark background (Midnight) becomes slightly elevated charcoal for layout hierarchy */
+.dark .bg-brand-midnight,
+.dark .dark\:bg-brand-midnight,
+.dark [class*="bg-brand-midnight"],
+.dark [class*="dark:bg-brand-midnight"] {
+  background-color: #16141A !important;
+}
+
+/* Card components like patterns, blog articles, testimonial slides, accordions, etc. */
+.dark .bg-slate-50,
+.dark .dark\:bg-brand-midnight,
+.dark .bg-white {
+  background-color: #16141A !important;
+}
+
+.dark .glass-panel {
+  background: rgba(10, 9, 11, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark footer {
+  background-color: #0A090B !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #121014 !important;
+}
+
+/* Hero section gradients override in dark mode */
+.dark section[style*="hero1.png"],
+.dark div[style*="hero1.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero1.png') !important;
+}
+.dark section[style*="hero2.png"],
+.dark div[style*="hero2.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero2.png') !important;
+}
+.dark section[style*="hero_about.png"],
+.dark div[style*="hero_about.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_about.png') !important;
+}
+.dark section[style*="hero_blog.png"],
+.dark div[style*="hero_blog.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_blog.png') !important;
+}
+.dark section[style*="hero_contact.png"],
+.dark div[style*="hero_contact.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_contact.png') !important;
+}
+.dark section[style*="hero_transactions.png"],
+.dark div[style*="hero_transactions.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_transactions.png') !important;
+}
+
+/* Custom Tailwind utility override for home2.html hero middle gradient color */
+.dark .via-\[\#0c1f35\] {
+  --tw-gradient-to: rgba(0, 0, 0, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #030303 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+/* About Page Font Weight Overrides */
+.about-page p,
+.about-page span:not(.nav-indicator):not(.fa-solid):not(.fa-brands),
+.about-page li,
+.about-page div:not(#header):not(#mobile-nav):not(footer):not(.fixed) {
+  font-weight: 500 !important;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4,
+.about-page h5,
+.about-page h6 {
+  font-weight: 700 !important;
+}
+
+.about-page header *:not(i):not([class*="fa-"]),
+.about-page footer *:not(i):not([class*="fa-"]),
+.about-page #mobile-nav *:not(i):not([class*="fa-"]) {
+  font-weight: inherit !important;
+}
+
+/* Footer text contrast overrides */
+footer, 
+footer a:not(:hover), 
+footer p {
+  color: #334155; /* slate-700 instead of slate-600 */
+}
+
+footer .text-slate-400,
+footer .text-slate-500,
+footer .text-slate-600 {
+  color: #334155 !important; /* slate-700 for better readability */
+}
+
+footer a.text-slate-900,
+footer h4.text-slate-900 {
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Dark mode footer contrast overrides */
+.dark footer,
+.dark footer a:not(:hover),
+.dark footer p {
+  color: #cbd5e1 !important; /* slate-300 instead of slate-400/500 */
+}
+
+.dark footer .text-slate-400,
+.dark footer .text-slate-500,
+.dark footer .text-slate-600,
+.dark footer .dark\:text-slate-400 {
+  color: #e2e8f0 !important; /* slate-200 for higher contrast on dark background */
+}
+
+.dark footer a.dark\:text-white,
+.dark footer h4.dark\:text-white {
+  color: #ffffff !important;
+}
+
+.dark footer a:hover {
+  color: #DEAB72 !important; /* Maintain warm gold color on hover */
+}
+

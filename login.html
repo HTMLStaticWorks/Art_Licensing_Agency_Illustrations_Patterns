@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licensing | Portal Sign In</title>
+  <meta name="description" content="Sign in to your Licensing partner portal to view your pattern coordinates, repeat collections, and licensing contracts.">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A090B',
+              midnight: '#16141A',
+              royal: '#D76C5C',
+              slate: '#64748B',
+              teal: '#4A7C75',
+              gold: '#DEAB72',
+              silver: '#F1F5F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="bg-[#0A090B] text-slate-100 min-h-screen flex flex-col justify-between transition-colors duration-300 font-sans">
+
+  <!-- Header / Navigation Back -->
+  <header class="p-6 max-w-6xl mx-auto w-full flex items-center justify-between">
+    <a href="index.html" class="flex items-center space-x-3 text-white font-serif text-xl tracking-wider">
+      <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
+      <span>LICENSING</span>
+    </a>
+    <a href="index.html" class="text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-brand-gold transition flex items-center">
+      <i class="fa-solid fa-arrow-left mr-2 rtl:ml-2"></i> Back to Home
+    </a>
+  </header>
+
+  <!-- Login Main Content Card -->
+  <main class="flex-grow flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-md bg-[#16141A] border border-slate-800 rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+      <!-- Glow background accent -->
+      <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-royal/10 rounded-full blur-3xl"></div>
+      
+      <div class="relative z-10 space-y-6">
+        <div class="text-center space-y-2">
+          <h2 class="text-2xl font-bold font-serif text-white tracking-wide">Portal Sign In</h2>
+          <p class="text-xs text-slate-400">Enter your credentials to access your secure pattern catalog credentials.</p>
+        </div>
+
+        <form class="validated-form space-y-4" onsubmit="handleLogin(event)">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
+            <div class="relative">
+              <input type="email" required placeholder="name@company.com" class="w-full bg-[#121014] border border-slate-800 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+              <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Password</label>
+            <div class="relative">
+              <input type="password" required placeholder="Enter password" class="w-full bg-[#121014] border border-slate-800 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+              <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-xs pt-1">
+            <label class="flex items-center space-x-2 text-slate-400">
+              <input type="checkbox" class="rounded bg-slate-900 border-slate-700 text-brand-royal focus:ring-0">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="text-brand-gold hover:underline">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-gold hover:bg-white text-[#0A090B] font-bold text-xs uppercase tracking-widest py-3 rounded transition duration-300 mt-2">
+            Sign In to Portal
+          </button>
+        </form>
+
+        <div class="text-center text-xs text-slate-400 pt-4 border-t border-slate-800">
+          Don't have access? <a href="signup.html" class="text-brand-gold font-bold hover:underline">Request Account</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer copyright -->
+  <footer class="p-6 text-center text-xs text-slate-600 dark:text-slate-500 border-t border-slate-900/50">
+    <p>&copy; 2026 Licensing Agency. All rights reserved. Vetted partner portal access.</p>
+  </footer>
+
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      // Simulate login and redirect to patterns page
+      window.location.href = 'patterns.html';
+    }
+  </script>
+</body>
+</html>

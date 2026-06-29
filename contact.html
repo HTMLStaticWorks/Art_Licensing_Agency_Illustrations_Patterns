@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licensing | Contact Us & Dual Submission Portals</title>
+  <meta name="description" content="Reach out to Licensing. Submit brand inquiry forms to request pattern coordinates or artist submission forms to apply for representation.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Licensing | Contact Us & Dual Submission Portals">
+  <meta property="og:description" content="Connect with our design agents for licensing inquiries or submit your artist portfolio for review.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A090B',
+              midnight: '#16141A',
+              royal: '#D76C5C',
+              slate: '#64748B',
+              teal: '#4A7C75',
+              gold: '#DEAB72',
+              silver: '#F1F5F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-royal via-brand-teal to-brand-gold z-50">
+    <div id="scroll-progress" class="h-full bg-brand-gold w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
+      <img src="logo.png" alt="Licensing Logo" class="h-10 w-auto rounded">
+      <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
+        LICENSING
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+      <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="home2.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home 2
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Patterns
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="licensing.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Licensing
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="blog.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Blog
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="contact.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2 font-semibold">
+        Contact
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+    </nav>
+
+    <!-- Toolbar controls -->
+    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
+        <i class="fa-solid fa-moon moon-icon text-brand-navy dark:text-slate-300 text-sm"></i>
+      </button>
+
+      <!-- RTL Toggle -->
+      <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle text direction">
+        RTL
+      </button>
+
+      <!-- Portal Access (Login / Sign Up) -->
+      <a href="login.html" class="text-brand-navy dark:text-slate-300 hover:text-brand-gold text-xs font-semibold uppercase tracking-wider transition duration-300 px-3 py-2">Login</a>
+      <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
+    </div>
+
+    <!-- Mobile controls & Hamburger -->
+    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+      <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+        <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation Menu -->
+  <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
+    <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
+    <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
+    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
+    <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="licensing.html" class="hover:text-brand-gold transition duration-300">Licensing</a>
+    <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
+    <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <a href="login.html" class="hover:text-brand-gold transition duration-300 text-sm">Login</a>
+    <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <div class="flex items-center space-x-6 mt-4">
+      <!-- Mobile Theme Toggle -->
+      <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+      </button>
+      <!-- Mobile RTL Toggle -->
+      <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
+        RTL
+      </button>
+    </div>
+  </div>
+
+  <main class="flex-grow pt-20">
+    <!-- Contact Hero -->
+    <section class="py-16 px-6 md:px-12 text-white text-center relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(10, 9, 11, 0.9), rgba(22, 20, 26, 0.95)), url('hero_contact.png');">
+      <div class="max-w-4xl mx-auto space-y-4" data-aos="fade-up">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Connect & Submit</span>
+        <h1 class="text-3xl md:text-5xl font-bold font-serif">Establish Connection</h1>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        <p class="text-slate-300 text-sm md:text-base max-w-xl mx-auto">
+          We match retail brands with represented creators, and accept submissions from professional surface illustrators.
+        </p>
+      </div>
+    </section>
+
+    <!-- Info Cards & Form Section -->
+    <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
+        <!-- Contact Cards Column -->
+        <div class="lg:col-span-4 space-y-6" data-aos="fade-right">
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex space-x-4 rtl:space-x-reverse">
+            <div class="text-brand-royal text-2xl"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Agency Telephone</h4>
+              <p class="text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">+1 (800) 555-ART-LYC</p>
+              <p class="text-xs text-slate-400 mt-0.5">Available 9 AM - 6 PM EST</p>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex space-x-4 rtl:space-x-reverse">
+            <div class="text-brand-royal text-2xl"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Agency Email</h4>
+              <p class="text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">hello@licensingagency.com</p>
+              <p class="text-xs text-slate-400 mt-0.5">Response within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex space-x-4 rtl:space-x-reverse">
+            <div class="text-brand-royal text-2xl"><i class="fa-solid fa-building"></i></div>
+            <div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Design Office</h4>
+              <p class="text-base font-semibold text-slate-600 dark:text-slate-300 mt-1">600 Montgomery St, Floor 41</p>
+              <p class="text-xs text-slate-400 mt-0.5">San Francisco, CA 94111</p>
+            </div>
+          </div>
+
+          <!-- Social Channels Card -->
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex space-x-4 rtl:space-x-reverse">
+            <div class="text-brand-royal text-2xl"><i class="fa-solid fa-share-nodes"></i></div>
+            <div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Social Channels</h4>
+              <div class="flex space-x-4 rtl:space-x-reverse mt-2 text-lg text-slate-400">
+                <a href="#" class="hover:text-brand-gold transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-brand-gold transition" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-brand-gold transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+              <p class="text-xs text-slate-400 mt-2">Latest collections spotlights.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secure Form Column (Toggled Dual Form) -->
+        <div class="lg:col-span-8 bg-slate-50 dark:bg-brand-midnight p-8 md:p-10 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-lg" data-aos="fade-left">
+          
+          <!-- Form Selector Tabs -->
+          <div class="flex border-b border-slate-200 dark:border-slate-800/80 mb-6">
+            <button id="tab-brand" onclick="switchContactTab('brand')" class="flex-1 pb-3 text-center text-sm font-bold uppercase tracking-wider border-b-2 border-brand-royal text-slate-900 dark:text-white focus:outline-none transition">
+              Brand Inquiry
+            </button>
+            <button id="tab-artist" onclick="switchContactTab('artist')" class="flex-1 pb-3 text-center text-sm font-bold uppercase tracking-wider border-b-2 border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-white focus:outline-none transition">
+              Artist Submission
+            </button>
+          </div>
+
+          <!-- Brand Inquiry Form Content -->
+          <div id="form-brand-container">
+            <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-6">Request Pattern Collections</h3>
+            <form class="validated-form space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Name *</label>
+                  <input type="text" required class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                  <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Corporate Email *</label>
+                  <input type="email" required class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                  <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Company Name *</label>
+                  <input type="text" required class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                  <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Target Product Line</label>
+                  <select class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-500 dark:text-slate-300 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                    <option value="fabric">Fabric & Textiles</option>
+                    <option value="stationery">Stationery & Paper Goods</option>
+                    <option value="packaging">Packaging & Cosmetics</option>
+                    <option value="homeware">Home Decor & Wallpaper</option>
+                    <option value="other">Other Commercial Products</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Detailed Inquiry *</label>
+                <textarea required rows="4" placeholder="Briefly describe your design needs, quantities, and timing..." class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition"></textarea>
+                <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy font-bold uppercase tracking-wider py-3 rounded transition-all shadow-md">
+                Submit Brand Inquiry
+              </button>
+
+              <!-- Success banner -->
+              <div class="form-success-banner hidden p-4 bg-emerald-950/20 border border-emerald-500 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded text-center">
+                Inquiry sent successfully. A creative agent will contact you with matching swatches within 2 hours.
+              </div>
+            </form>
+          </div>
+
+          <!-- Artist Submission Form Content (Hidden by default) -->
+          <div id="form-artist-container" class="hidden">
+            <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-6">Apply for Representation</h3>
+            <form class="validated-form space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Artist Name *</label>
+                  <input type="text" required class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                  <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Email Address *</label>
+                  <input type="email" required class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                  <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Portfolio/Website URL *</label>
+                  <input type="url" required placeholder="https://..." class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                  <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Primary Medium</label>
+                  <select class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-500 dark:text-slate-300 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                    <option value="watercolor">Watercolor & Inks</option>
+                    <option value="gouache">Gouache & Painting</option>
+                    <option value="digital">Vector & Digital repeats</option>
+                    <option value="mixed">Mixed Media</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Link to Repeat Swatch Samples *</label>
+                <input type="url" required placeholder="Dropbox/Google Drive link to repeat layout swatches" class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition">
+                <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2">Short Bio & Experience *</label>
+                <textarea required rows="4" placeholder="Tell us about yourself and your design journey..." class="w-full bg-white dark:bg-brand-navy border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-brand-gold transition"></textarea>
+                <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy font-bold uppercase tracking-wider py-3 rounded transition-all shadow-md">
+                Submit Portfolio
+              </button>
+
+              <!-- Success banner -->
+              <div class="form-success-banner hidden p-4 bg-emerald-950/20 border border-emerald-500 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded text-center">
+                Submission received! Our creative board reviews portfolios monthly and will contact you via email.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embedded Google Map -->
+    <section class="w-full h-[450px] relative">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.9729864273874!2d-122.4052327!3d37.7951559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580f49bf87d37%3A0x6b7139cb8017c675!2sTransamerica%20Pyramid!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" class="w-full h-full border-0 grayscale opacity-90 dark:opacity-60 dark:invert-[0.9] dark:hue-rotate-180" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">FAQ</span>
+          <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white font-serif">Frequently Asked Questions</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <div class="border-b border-slate-200 dark:border-slate-800/80 pb-4">
+            <button class="accordion-header w-full flex items-center justify-between text-left font-serif font-semibold text-slate-900 dark:text-white py-3 text-base md:text-lg focus:outline-none" aria-expanded="false">
+              <span>What is your standard timeline for licensing unreleased patterns?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon text-brand-gold transition duration-300"></i>
+            </button>
+            <div class="accordion-content hidden mt-2 text-slate-500 text-xs md:text-sm leading-relaxed">
+              For listed catalog patterns, licensing approval is instant and source files are delivered within 24 hours of signature. Custom pattern coordinates and colorway commissions usually require between 2 and 4 weeks.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="border-b border-slate-200 dark:border-slate-800/80 pb-4">
+            <button class="accordion-header w-full flex items-center justify-between text-left font-serif font-semibold text-slate-900 dark:text-white py-3 text-base md:text-lg focus:outline-none" aria-expanded="false">
+              <span>How do you protect designs from copyright infringement?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon text-brand-gold transition duration-300"></i>
+            </button>
+            <div class="accordion-content hidden mt-2 text-slate-500 text-xs md:text-sm leading-relaxed">
+              We enforce strict digital rights, high-resolution watermark protection inside our catalog, and draft exclusive category/territorial boundaries in all contracts to safeguard copyright integrity.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="border-b border-slate-200 dark:border-slate-800/80 pb-4">
+            <button class="accordion-header w-full flex items-center justify-between text-left font-serif font-semibold text-slate-900 dark:text-white py-3 text-base md:text-lg focus:outline-none" aria-expanded="false">
+              <span>Are your source repeat files compatible with commercial fabric screen print mills?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon text-brand-gold transition duration-300"></i>
+            </button>
+            <div class="accordion-content hidden mt-2 text-slate-500 text-xs md:text-sm leading-relaxed">
+              Yes. All files are checked by our production directors. We supply seamless repeats, separated color channel layers, and matching Pantone TCX metrics compatible with rotative screen or digital printing.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-royal rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-3xl mx-auto relative z-10 space-y-6" data-aos="zoom-in">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Verified Portfolio</span>
+        <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight font-serif">Want to review our patterns track record first?</h2>
+        <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
+          Explore our completed designer portfolios and licensed coordinates across apparel, home, and stationery goods.
+        </p>
+        <div class="pt-4 max-w-xs mx-auto md:max-w-none">
+          <a href="licensing.html" class="flex md:inline-flex items-center justify-center text-center px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg text-sm md:text-base leading-normal w-full md:w-auto font-sans">
+            View Completed Licenses
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Col 1: Overview -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+          <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
+          <span>LICENSING</span>
+        </a>
+        <p class="text-sm text-slate-400">
+          Professional art licensing agency representing world-class illustrators and surface designers for fabrics, stationery, packaging, and branding campaigns.
+        </p>
+        <div class="flex space-x-4 rtl:space-x-reverse text-lg text-slate-400">
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Licensing Categories</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-brand-gold transition">Fabric & Textiles</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Stationery & Paper Goods</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Packaging & Cosmetics</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Home Decor & Wallpaper</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Custom Commissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4 font-serif">Agency Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-brand-gold transition">Home Page</a></li>
+          <li><a href="home2.html" class="hover:text-brand-gold transition">Home 2 Page</a></li>
+          <li><a href="patterns.html" class="hover:text-brand-gold transition">Patterns & Styles</a></li>
+          <li><a href="about.html" class="hover:text-brand-gold transition">About the Agency</a></li>
+          <li><a href="licensing.html" class="hover:text-brand-gold transition">Licensing Portfolio</a></li>
+          <li><a href="blog.html" class="hover:text-brand-gold transition">Creative Blog</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition font-semibold text-brand-gold">Contact & Submissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="space-y-4">
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4 font-serif">Creative Newsletter</h4>
+        <p class="text-sm">Subscribe to receive monthly catalog updates, designer spotlights, and surface pattern trend reports.</p>
+        <form class="validated-form relative flex flex-col space-y-2">
+          <div class="relative">
+            <input type="email" required placeholder="Enter your email" class="w-full bg-slate-900 border border-slate-700/50 text-white text-xs px-3 py-2.5 rounded focus:outline-none focus:border-brand-gold transition">
+            <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+          </div>
+          <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-semibold uppercase tracking-wider py-2.5 rounded transition">
+            Subscribe
+          </button>
+          <div class="form-success-banner hidden text-[11px] text-brand-gold font-semibold mt-2 font-serif">
+            Successfully subscribed! Thank you for joining our community.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom footer details -->
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+      <p>&copy; 2026 Licensing Agency. All rights reserved. Creative assets are protected by copyright of respective artists.</p>
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0 font-sans">
+        <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="#" class="hover:text-slate-300">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-to-top" class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-navy p-3 rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    // switch contact tab logic
+    function switchContactTab(tabName) {
+      const brandContainer = document.getElementById('form-brand-container');
+      const artistContainer = document.getElementById('form-artist-container');
+      const brandBtn = document.getElementById('tab-brand');
+      const artistBtn = document.getElementById('tab-artist');
+
+      if (tabName === 'brand') {
+        brandContainer.classList.remove('hidden');
+        artistContainer.classList.add('hidden');
+        brandBtn.className = "flex-1 pb-3 text-center text-sm font-bold uppercase tracking-wider border-b-2 border-brand-royal text-slate-900 dark:text-white focus:outline-none transition";
+        artistBtn.className = "flex-1 pb-3 text-center text-sm font-bold uppercase tracking-wider border-b-2 border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-white focus:outline-none transition";
+      } else {
+        brandContainer.classList.add('hidden');
+        artistContainer.classList.remove('hidden');
+        artistBtn.className = "flex-1 pb-3 text-center text-sm font-bold uppercase tracking-wider border-b-2 border-brand-royal text-slate-900 dark:text-white focus:outline-none transition";
+        brandBtn.className = "flex-1 pb-3 text-center text-sm font-bold uppercase tracking-wider border-b-2 border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-white focus:outline-none transition";
+      }
+    }
+  </script>
+  <!-- Main Script -->
+  <script src="main.js" defer></script>
+</body>
+</html>

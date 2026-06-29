@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licensing | Portfolio Curation & Designer Releases</title>
+  <meta name="description" content="Explore Licensing's track record of successfully closed artist licenses, product packaging prints, and commercial fabric swatches.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Licensing | Portfolio Curation & Designer Releases">
+  <meta property="og:description" content="Discover our history of verified design collections and commercial print license partnerships.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A090B',
+              midnight: '#16141A',
+              royal: '#D76C5C',
+              slate: '#64748B',
+              teal: '#4A7C75',
+              gold: '#DEAB72',
+              silver: '#F1F5F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-royal via-brand-teal to-brand-gold z-50">
+    <div id="scroll-progress" class="h-full bg-brand-gold w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
+      <img src="logo.png" alt="Licensing Logo" class="h-10 w-auto rounded">
+      <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
+        LICENSING
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+      <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="home2.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home 2
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="patterns.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Patterns
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="licensing.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2 font-semibold">
+        Licensing
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="blog.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Blog
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="contact.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Contact
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+    </nav>
+
+    <!-- Toolbar controls -->
+    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
+        <i class="fa-solid fa-moon moon-icon text-brand-navy dark:text-slate-300 text-sm"></i>
+      </button>
+
+      <!-- RTL Toggle -->
+      <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle text direction">
+        RTL
+      </button>
+
+      <!-- Portal Access (Login / Sign Up) -->
+      <a href="login.html" class="text-brand-navy dark:text-slate-300 hover:text-brand-gold text-xs font-semibold uppercase tracking-wider transition duration-300 px-3 py-2">Login</a>
+      <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-xs font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
+    </div>
+
+    <!-- Mobile controls & Hamburger -->
+    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+      <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+        <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation Menu -->
+  <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
+    <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
+    <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
+    <a href="patterns.html" class="hover:text-brand-gold transition duration-300">Patterns</a>
+    <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="licensing.html" class="hover:text-brand-gold transition duration-300">Licensing</a>
+    <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
+    <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <a href="login.html" class="hover:text-brand-gold transition duration-300 text-sm">Login</a>
+    <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <div class="flex items-center space-x-6 mt-4">
+      <!-- Mobile Theme Toggle -->
+      <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+      </button>
+      <!-- Mobile RTL Toggle -->
+      <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
+        RTL
+      </button>
+    </div>
+  </div>
+
+  <main class="flex-grow pt-20">
+    <!-- Transactions Hero -->
+    <section class="py-20 px-6 md:px-12 text-white text-center relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(10, 9, 11, 0.9), rgba(22, 20, 26, 0.95)), url('hero_transactions.png');">
+      <div class="max-w-4xl mx-auto space-y-4" data-aos="fade-up">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Our Performance Records</span>
+        <h1 class="text-3xl md:text-5xl font-bold font-serif">Completed Licenses</h1>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        <p class="text-slate-300 text-sm md:text-base max-w-xl mx-auto">
+          A showcase of verified surface design placements, coordinating repeat prints, and custom commissions matching leading lifestyle retail brands.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filterable Tombstones Grid -->
+    <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap justify-center gap-3 mb-16" id="filters-container">
+          <button onclick="filterTransactions('all')" class="filter-btn px-6 py-2 bg-brand-royal text-white text-xs font-semibold uppercase tracking-wider rounded transition-all">All Categories</button>
+          <button onclick="filterTransactions('fabric')" class="filter-btn px-6 py-2 bg-slate-200 dark:bg-brand-midnight text-brand-navy dark:text-slate-300 hover:bg-brand-royal/20 text-xs font-semibold uppercase tracking-wider rounded transition-all">Fabric & Textiles</button>
+          <button onclick="filterTransactions('stationery')" class="filter-btn px-6 py-2 bg-slate-200 dark:bg-brand-midnight text-brand-navy dark:text-slate-300 hover:bg-brand-royal/20 text-xs font-semibold uppercase tracking-wider rounded transition-all">Stationery & Paper</button>
+          <button onclick="filterTransactions('packaging')" class="filter-btn px-6 py-2 bg-slate-200 dark:bg-brand-midnight text-brand-navy dark:text-slate-300 hover:bg-brand-royal/20 text-xs font-semibold uppercase tracking-wider rounded transition-all">Packaging & Beauty</button>
+          <button onclick="filterTransactions('homeware')" class="filter-btn px-6 py-2 bg-slate-200 dark:bg-brand-midnight text-brand-navy dark:text-slate-300 hover:bg-brand-royal/20 text-xs font-semibold uppercase tracking-wider rounded transition-all">Home & Wallpaper</button>
+        </div>
+
+        <!-- Tombstones Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="tombstone-grid">
+          <!-- Deal 1 (Fabric) -->
+          <div class="tombstone-card fabric bg-slate-50 dark:bg-brand-midnight p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md text-center flex flex-col justify-between min-h-[250px] transition-all duration-300 hover:border-brand-gold">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Fabric & Textiles</p>
+            <div class="my-6">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">BOTANICAL GARDEN</h4>
+              <p class="text-sm text-slate-400 my-2">Licensed by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">ANTHROPOLOGIE</h5>
+            </div>
+            <div>
+              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 mx-auto my-2"></div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">Sarah Jenkins</p>
+              <p class="text-sm text-slate-400 mt-1">Watercolors & Inks</p>
+            </div>
+          </div>
+
+          <!-- Deal 2 (Stationery) -->
+          <div class="tombstone-card stationery bg-slate-50 dark:bg-brand-midnight p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md text-center flex flex-col justify-between min-h-[250px] transition-all duration-300 hover:border-brand-gold">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Stationery & Paper</p>
+            <div class="my-6">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">WHIMSICAL WOODS</h4>
+              <p class="text-sm text-slate-400 my-2">Licensed by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">MINTED CO.</h5>
+            </div>
+            <div>
+              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 mx-auto my-2"></div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">Leo Vance</p>
+              <p class="text-sm text-slate-400 mt-1">Gouache & Crayon</p>
+            </div>
+          </div>
+
+          <!-- Deal 3 (Packaging) -->
+          <div class="tombstone-card packaging bg-slate-50 dark:bg-brand-midnight p-8 rounded-xl border border-slate-200/50 dark:border-slate-800 shadow-md text-center flex flex-col justify-between min-h-[250px] transition-all duration-300 hover:border-brand-gold">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Packaging & Beauty</p>
+            <div class="my-6">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">BAUHAUS GEOMETRIC</h4>
+              <p class="text-sm text-slate-400 my-2">Licensed by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">PAPER CHASE</h5>
+            </div>
+            <div>
+              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 mx-auto my-2"></div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">Sofia Sterling</p>
+              <p class="text-sm text-slate-400 mt-1">Vector Graphics</p>
+            </div>
+          </div>
+
+          <!-- Deal 4 (Homeware) -->
+          <div class="tombstone-card homeware bg-slate-50 dark:bg-brand-midnight p-8 rounded-xl border border-slate-200/50 dark:border-slate-800 shadow-md text-center flex flex-col justify-between min-h-[250px] transition-all duration-300 hover:border-brand-gold">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Home & Wallpaper</p>
+            <div class="my-6">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">COASTAL WATERCOLOR</h4>
+              <p class="text-sm text-slate-400 my-2">Licensed by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">LUSH COSMETICS</h5>
+            </div>
+            <div>
+              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 mx-auto my-2"></div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">Marcus Pendelton</p>
+              <p class="text-sm text-slate-400 mt-1">Watercolors & Inks</p>
+            </div>
+          </div>
+
+          <!-- Deal 5 (Fabric) -->
+          <div class="tombstone-card fabric bg-slate-50 dark:bg-brand-midnight p-8 rounded-xl border border-slate-200/50 dark:border-slate-800 shadow-md text-center flex flex-col justify-between min-h-[250px] transition-all duration-300 hover:border-brand-gold">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Fabric & Textiles</p>
+            <div class="my-6">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">SUNNY MEADOW</h4>
+              <p class="text-sm text-slate-400 my-2">Licensed by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">TARGET STORES</h5>
+            </div>
+            <div>
+              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 mx-auto my-2"></div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">Sarah Jenkins</p>
+              <p class="text-sm text-slate-400 mt-1">Illustrative Repeats</p>
+            </div>
+          </div>
+
+          <!-- Deal 6 (Packaging) -->
+          <div class="tombstone-card packaging bg-slate-50 dark:bg-brand-midnight p-8 rounded-xl border border-slate-200/50 dark:border-slate-800 shadow-md text-center flex flex-col justify-between min-h-[250px] transition-all duration-300 hover:border-brand-gold">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Packaging & Beauty</p>
+            <div class="my-6">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">EUCALYPTUS GLOW</h4>
+              <p class="text-sm text-slate-400 my-2">Licensed by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">AURA SKINCARE</h5>
+            </div>
+            <div>
+              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 mx-auto my-2"></div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">Sofia Sterling</p>
+              <p class="text-sm text-slate-400 mt-1">Fine Linework</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-depth Case Studies -->
+    <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Case Studies</span>
+          <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Design Collaboration Cases</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="space-y-16">
+          <!-- Case Study 1 -->
+          <div class="grid lg:grid-cols-12 gap-12 items-center" data-aos="fade-up">
+            <div class="lg:col-span-5 relative">
+              <img src="tech_exit_case_study.png" alt="Textile design watercolor curation" class="rounded-xl shadow-lg w-full object-cover h-[300px]">
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <span class="text-brand-gold text-xs font-bold uppercase tracking-wider">Textile Sector Collaboration</span>
+              <h3 class="text-2xl font-bold font-serif text-slate-900 dark:text-white">Anthropologie: Summer Watercolor Apparel</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm">
+                **The Challenge**: Anthropologie sought to license a botanic watercolor capsule for their summer linen lines. They needed complex colorways setup to align perfectly across different fabric screen weights.
+              </p>
+              <p class="text-slate-600 dark:text-slate-400 text-sm">
+                **Our Curation**: Licensing matched illustrator Sarah Jenkins. We adjusted color channels for the print mill screens, offset pattern boundaries, and supervised coordinate selections.
+              </p>
+              <p class="text-slate-800 dark:text-slate-300 text-sm font-semibold">
+                **The Outcome**: Delivered 4 coordinate designs. The collection sold out online in three weeks with zero printing errors or layout mismatch issues.
+              </p>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="grid lg:grid-cols-12 gap-12 items-center" data-aos="fade-up">
+            <div class="lg:col-span-5 lg:order-2 relative">
+              <img src="manufacturing_case_study.png" alt="Cosmetic boxes prints lookbook" class="rounded-xl shadow-lg w-full object-cover h-[300px]">
+            </div>
+            <div class="lg:col-span-7 lg:order-1 space-y-4">
+              <span class="text-brand-gold text-xs font-bold uppercase tracking-wider">Stationery & Gifting Curation</span>
+              <h3 class="text-2xl font-bold font-serif text-slate-900 dark:text-white">Minted Co: Whimsical Forest Floor Repeats</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm">
+                **The Challenge**: Minted Co required high-quality woodland illustration spots and coordinating repeating patterns for custom holiday journals and greeting cards.
+              </p>
+              <p class="text-slate-600 dark:text-slate-400 text-sm">
+                **Our Curation**: We matched gouache artist Leo Vance, providing layouts designed to adapt cleanly across foil presses and paperboard die-cuts.
+              </p>
+              <p class="text-slate-800 dark:text-slate-300 text-sm font-semibold">
+                **The Outcome**: The whimsical forest wraps launched across national retail locations, increasing custom journal sells by 35% during the holiday campaign.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Success Quote Section -->
+    <section class="py-20 px-6 bg-brand-navy text-white text-center border-t border-slate-800">
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="text-brand-gold text-4xl"><i class="fa-solid fa-quote-left"></i></div>
+        <p class="text-lg md:text-xl font-serif italic text-slate-200">
+          "Licensing did not just hand us a directory of static images. They delivered layout-ready repeats and handled contract terms smoothly under our strict manufacturing deadlines."
+        </p>
+        <p class="text-xs uppercase tracking-widest text-slate-400 mt-4">&mdash; Elizabeth Miller, Creative Director, Papercraft Co.</p>
+      </div>
+    </section>
+
+    <!-- Call to Action Section / Case Study Request -->
+    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-royal rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-6xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center" data-aos="zoom-in">
+        <!-- Left Column -->
+        <div class="lg:col-span-6 space-y-6 text-left rtl:text-right">
+          <span class="inline-block px-3 py-1 bg-brand-royal/10 border border-brand-royal/30 text-brand-royal text-xs font-semibold tracking-widest uppercase rounded-full">
+            Creative Lookbook
+          </span>
+          <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Request Our Print Lookbook Catalog</h2>
+          <p class="text-slate-300 text-base md:text-lg max-w-xl">
+            Gain digital credentials to browse exclusive unreleased repeat pattern swatches and artist pricing tables.
+          </p>
+          <div class="flex items-center space-x-3 rtl:space-x-reverse text-xs text-slate-400">
+            <i class="fa-solid fa-file-pdf text-brand-royal"></i>
+            <span>Lookbook credentials delivered instantly via email.</span>
+          </div>
+        </div>
+
+        <!-- Right Column (Portfolio Request Form) -->
+        <div class="lg:col-span-6">
+          <div class="glass-panel p-8 rounded-2xl border border-white/10 relative overflow-hidden bg-brand-navy/60 backdrop-blur-md">
+            <!-- Form State -->
+            <form id="portfolio-request-form" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Company Website</label>
+                <input type="text" id="portfolio-domain" required placeholder="e.g. brandname.com" class="w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Professional Email</label>
+                <div class="relative">
+                  <input type="email" id="portfolio-email" required placeholder="Enter professional email" class="w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+                  <span id="portfolio-email-error" class="text-[10px] text-red-500 block mt-1"></span>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-bold uppercase tracking-widest py-3 rounded transition duration-300">
+                Request Catalogue PDF
+              </button>
+            </form>
+
+            <!-- Success State (hidden by default) -->
+            <div id="portfolio-success" class="hidden space-y-6 text-center py-6">
+              <div class="w-16 h-16 bg-brand-royal/10 text-brand-royal rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-file-arrow-down animate-bounce"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold font-serif text-white">Access Key Generated</h3>
+                <p class="text-sm text-slate-300">Your lookbook catalog PDF access credentials are ready.</p>
+              </div>
+              <div class="p-4 bg-brand-gold/5 border border-brand-gold/20 rounded-lg text-xs text-slate-400">
+                A security access token was sent to <strong id="portfolio-result-email" class="text-white"></strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Col 1: Overview -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+          <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
+          <span>LICENSING</span>
+        </a>
+        <p class="text-sm text-slate-400">
+          Professional art licensing agency representing world-class illustrators and surface designers for fabrics, stationery, packaging, and branding campaigns.
+        </p>
+        <div class="flex space-x-4 rtl:space-x-reverse text-lg text-slate-400">
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Licensing Categories</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-brand-gold transition">Fabric & Textiles</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Stationery & Paper Goods</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Packaging & Cosmetics</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Home Decor & Wallpaper</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Custom Commissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Agency Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-brand-gold transition">Home Page</a></li>
+          <li><a href="home2.html" class="hover:text-brand-gold transition">Home 2 Page</a></li>
+          <li><a href="patterns.html" class="hover:text-brand-gold transition">Patterns & Styles</a></li>
+          <li><a href="about.html" class="hover:text-brand-gold transition">About the Agency</a></li>
+          <li><a href="licensing.html" class="hover:text-brand-gold transition">Licensing Portfolio</a></li>
+          <li><a href="blog.html" class="hover:text-brand-gold transition">Creative Blog</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition">Contact & Submissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="space-y-4">
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Creative Newsletter</h4>
+        <p class="text-sm">Subscribe to receive monthly catalog updates, designer spotlights, and surface pattern trend reports.</p>
+        <form class="validated-form relative flex flex-col space-y-2">
+          <div class="relative">
+            <input type="email" required placeholder="Enter your email" class="w-full bg-slate-900 border border-slate-700/50 text-white text-xs px-3 py-2.5 rounded focus:outline-none focus:border-brand-gold transition">
+            <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+          </div>
+          <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-semibold uppercase tracking-wider py-2.5 rounded transition">
+            Subscribe
+          </button>
+          <div class="form-success-banner hidden text-[11px] text-brand-gold font-semibold mt-2">
+            Successfully subscribed! Thank you for joining our community.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom footer details -->
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+      <p>&copy; 2026 Licensing Agency. All rights reserved. Creative assets are protected by copyright of respective artists.</p>
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0">
+        <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="#" class="hover:text-slate-300">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-to-top" class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-navy p-3 rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    // Sector Filter logic
+    function filterTransactions(sector) {
+      const cards = document.querySelectorAll('.tombstone-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update button styling
+      buttons.forEach(btn => {
+        if (btn.textContent.toLowerCase().includes(sector) || (sector === 'all' && btn.textContent.toLowerCase().includes('all'))) {
+          btn.classList.add('bg-brand-royal', 'text-white');
+          btn.classList.remove('bg-slate-200', 'dark:bg-brand-midnight', 'text-brand-navy', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('bg-brand-royal', 'text-white');
+          btn.classList.add('bg-slate-200', 'dark:bg-brand-midnight', 'text-brand-navy', 'dark:text-slate-300');
+        }
+      });
+
+      // Filter cards
+      cards.forEach(card => {
+        if (sector === 'all' || card.classList.contains(sector)) {
+          card.classList.remove('hidden');
+          // simple fade-in
+          setTimeout(() => { card.style.opacity = '1'; }, 10);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => { card.classList.add('hidden'); }, 300);
+        }
+      });
+    }
+  </script>
+  <!-- Main Script -->
+  <script src="main.js" defer></script>
+</body>
+</html>
