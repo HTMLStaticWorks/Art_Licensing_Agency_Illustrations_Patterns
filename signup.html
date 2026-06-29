@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Licensing | Request Portal Access</title>
   <script>
-    localStorage.setItem('theme', 'dark');
-    document.documentElement.classList.add('dark');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   </script>
   <meta name="description" content="Request access credentials to Licensing's private partner portal and surface design repeats catalog database.">
   
@@ -68,7 +72,7 @@
       
       <div class="relative z-10 space-y-6">
         <div class="text-center space-y-4">
-          <a href="index.html" class="inline-flex items-center space-x-3 rtl:space-x-reverse text-slate-900 dark:text-white font-serif text-xl tracking-wider">
+          <a href="index.html" class="inline-flex items-center space-x-3 rtl:space-x-reverse text-slate-900 dark:text-white font-serif text-2xl font-bold tracking-wider">
             <img src="logo.png" alt="Licensing Logo" class="h-8 w-auto rounded">
             <span>LICENSING</span>
           </a>
@@ -115,7 +119,7 @@
             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Password</label>
             <div class="relative">
               <input type="password" id="signup-password" required placeholder="Min 8 characters" class="w-full bg-slate-50 dark:bg-[#121014] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm rounded px-4 py-2.5 pr-10 rtl:pr-4 rtl:pl-10 focus:outline-none focus:border-brand-gold transition">
-              <button type="button" onclick="togglePasswordVisibility('signup-password', this)" class="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white focus:outline-none">
+              <button type="button" onclick="togglePasswordVisibility('signup-password', this)" class="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-800 dark:hover:text-white focus:outline-none">
                 <i class="fa-regular fa-eye"></i>
               </button>
               <span class="error-message text-[10px] text-red-500 block mt-1"></span>
@@ -126,7 +130,7 @@
             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Confirm Password</label>
             <div class="relative">
               <input type="password" id="signup-confirm" required placeholder="Repeat password" class="w-full bg-slate-50 dark:bg-[#121014] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm rounded px-4 py-2.5 pr-10 rtl:pr-4 rtl:pl-10 focus:outline-none focus:border-brand-gold transition">
-              <button type="button" onclick="togglePasswordVisibility('signup-confirm', this)" class="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white focus:outline-none">
+              <button type="button" onclick="togglePasswordVisibility('signup-confirm', this)" class="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-800 dark:hover:text-white focus:outline-none">
                 <i class="fa-regular fa-eye"></i>
               </button>
               <span class="error-message text-[10px] text-red-500 block mt-1"></span>

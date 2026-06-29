@@ -191,7 +191,7 @@
           <span class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
             Premium Surface Designs
           </span>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight">
+          <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight">
             High-End Art.<br>
             <span id="hero-gradient-title" class="custom-gradient-text font-serif">Seamlessly Licensed.</span>
           </h1>
@@ -923,7 +923,7 @@
         canvasTitle: "Woodland Forest Friends",
         backImg: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=500&q=80",
         middleImg: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=500&q=80",
-        frontImg: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80"
+        frontImg: "woodland_nursery_pattern.png"
       }
     };
 
@@ -941,7 +941,7 @@
 
       // Update text
       const data = heroContent[tabKey];
-      document.getElementById('hero-gradient-title').parentElement.innerHTML = data.title;
+      document.getElementById('hero-title').innerHTML = data.title;
       document.getElementById('hero-description').textContent = data.desc;
       document.getElementById('hero-canvas-label').textContent = data.label;
       document.getElementById('hero-canvas-title').textContent = data.canvasTitle;
